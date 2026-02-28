@@ -16,8 +16,8 @@ const Hero = () => {
     const [isVisible] = useState(true);
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
-            {/* Main Hero Section */}
+        <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
+           
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
                 {/* Background Decorative Elements */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
@@ -29,23 +29,16 @@ const Hero = () => {
 
                     {/* Left Column: Text Content */}
                     <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
-                        {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold mb-6 uppercase tracking-wider">
-                            <RocketLaunch sx={{ fontSize: 14 }} />
-                            Available for New Projects
-                        </div>
 
                         {/* Main Heading */}
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
-                            สวัสดีครับ, ผม <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">วีรพล</span><br />
-                            เป็น Full-stack Developer
+                            Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Arthit Chatusor</span><br />
+                            เป็น Front-End Developer
                         </h1>
 
                         {/* Subheading */}
                         <p className="max-w-2xl mx-auto lg:mx-0 text-lg text-slate-600 mb-8 leading-relaxed">
-                            ผมชอบสร้างสรรค์ประสบการณ์บนเว็บไซต์ที่สวยงามและใช้งานง่าย
-                            เชี่ยวชาญด้าน React, Node.js และ Cloud Solutions
-                            มุ่งเน้นที่การเขียน Code ที่มีคุณภาพและประสิทธิภาพสูง
+                            Welcome to my personal website! I'm passionate about creating beautiful and functional web experiences. Feel free to explore my projects and get in touch!
                         </p>
 
                         {/* CTA Buttons */}
@@ -73,7 +66,7 @@ const Hero = () => {
                             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl">
                                 {/* Replace src with your image URL */}
                                 <img
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                                    src="src\Image\profile-img.png"
                                     alt="Profile"
                                     className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                                 />
