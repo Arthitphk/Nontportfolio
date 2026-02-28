@@ -25,13 +25,13 @@ const Hero = () => {
                     <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-blue-100 rounded-full blur-[100px] opacity-60"></div>
                 </div>
 
-                <div className={`max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className={`max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 
                     {/* Left Column: Text Content */}
                     <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
 
                         {/* Main Heading */}
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
+                        <h1 className="text-4xl md:text-4xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
                             Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Arthit Chatusor</span><br />
                             เป็น Front-End Developer
                         </h1>
