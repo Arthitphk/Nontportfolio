@@ -7,10 +7,10 @@ const Navbar = () => {
 
   // ข้อมูลเมนูนำทาง
   const navLinks = [
-    { name: 'หน้าแรก', href: '#home', icon: <Person fontSize="small" /> },
-    { name: 'ผลงาน', href: '#projects', icon: <Code fontSize="small" /> },
-    { name: 'เรซูเม่', href: '#resume', icon: <Description fontSize="small" /> },
-    { name: 'ติดต่อ', href: '#contact', icon: <ContactPage fontSize="small" /> },
+    { name: 'Home', href: '#home', icon: <Person fontSize="small" /> },
+    { name: 'Project', href: '#projects', icon: <Code fontSize="small" /> },
+    { name: 'Blog', href: '#resume', icon: <Description fontSize="small" /> },
+    { name: 'Contact', href: '#contact', icon: <ContactPage fontSize="small" /> },
   ];
 
   // ข้อมูล Social Media
@@ -22,7 +22,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-return (
+ return (
     <nav className="w-full z-50 bg-white/80 backdrop-blur-md shadow-sm dark:bg-slate-900/80 dark:text-white transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
