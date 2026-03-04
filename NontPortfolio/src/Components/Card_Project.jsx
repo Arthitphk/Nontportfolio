@@ -1,137 +1,163 @@
-import React from 'react';
-// นำเข้าไอคอนจาก Material UI
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
-import LanguageIcon from '@mui/icons-material/Language';
 import LayersIcon from '@mui/icons-material/Layers';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import MemoryIcon from '@mui/icons-material/Memory';
-import TerminalIcon from '@mui/icons-material/Terminal';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
 
-const Card_Project = () => {
-  // ข้อมูลโปรเจกต์ตัวอย่าง
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Dashboard",
-      description: "ระบบจัดการร้านค้าออนไลน์แบบครบวงจร รองรับการดูสถิติแบบ Real-time และการจัดการสต็อกสินค้า",
-      tech: ["React", "Tailwind CSS", "Chart.js"],
-      link: "#",
-      github: "#",
-      type: "Web Application",
-      icon: <LayersIcon sx={{ fontSize: 32 }} />
-    },
-    {
-      id: 2,
-      title: "Health Tracking App",
-      description: "แอปพลิเคชันติดตามสุขภาพและการออกกำลังกาย เน้นประสบการณ์ผู้ใช้ (UX) ที่ลื่นไหลบนมือถือ",
-      tech: ["Next.js", "TypeScript", "Framer Motion"],
-      link: "#",
-      github: "#",
-      type: "Mobile First",
-      icon: <SmartphoneIcon sx={{ fontSize: 32 }} />
-    },
-    {
-      id: 3,
-      title: "AI Content Platform",
-      description: "แพลตฟอร์มสร้างเนื้อหาด้วย AI ที่เชื่อมต่อกับ API ระดับโลก พร้อมระบบสมาชิก",
-      tech: ["React", "Redux", "Node.js"],
-      link: "#",
-      github: "#",
-      type: "Full Stack",
-      icon: <MemoryIcon sx={{ fontSize: 32 }} />
-    },
-    {
-      id: 4,
-      title: "AI Content Platform",
-      description: "แพลตฟอร์มสร้างเนื้อหาด้วย AI ที่เชื่อมต่อกับ API ระดับโลก พร้อมระบบสมาชิก",
-      tech: ["React", "Redux", "Node.js"],
-      link: "#",
-      github: "#",
-      type: "Full Stack",
-      icon: <MemoryIcon sx={{ fontSize: 32 }} />
+const projects = [
+  {
+    id: 1,
+    title: "Modern E-Commerce Experience",
+    description: "แพลตฟอร์มอีคอมเมิร์ซระดับไฮเอนด์ที่เน้นความเร็วและการใช้งานที่ลื่นไหล พัฒนาด้วย Next.js และเชื่อมต่อระบบตะกร้าสินค้าแบบ Real-time พร้อมระบบจัดการสต็อกสินค้าที่ซับซ้อน",
+    tags: [
+      { name: "Next.js", color: "bg-black text-white" },
+      { name: "TypeScript", color: "bg-[#3178C6] text-white" },
+      { name: "Tailwind CSS", color: "bg-[#38BDF8] text-white" },
+      { name: "Redux", color: "bg-[#764ABC] text-white" }
+    ],
+    githubUrl: "#",
+    liveUrl: "#",
+    imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1600",
+    stats: {
+      performance: "98/100",
+      stack: "Full Stack"
     }
-  ];
+  },
+  {
+    id: 2,
+    title: "AI Creative Dashboard",
+    description: "เครื่องมือวิเคราะห์ข้อมูลสำหรับทีมสร้างสรรค์งานโฆษณา โดยใช้ AI ในการวิเคราะห์แนวโน้มตลาดและแสดงผลผ่านกราฟิกที่ตอบโต้ได้ (Interactive Data Visualization)",
+    tags: [
+      { name: "React", color: "bg-[#61DAFB] text-slate-900" },
+      { name: "Framer Motion", color: "bg-[#E902B5] text-white" },
+      { name: "D3.js", color: "bg-[#F9A03F] text-white" },
+      { name: "OpenAI", color: "bg-[#10a37f] text-white" }
+    ],
+    githubUrl: "#",
+    liveUrl: "#",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=1600",
+    stats: {
+      performance: "Interactive",
+      stack: "AI Integrated"
+    }
+  },
+  {
+    id: 3,
+    title: "Crypto Wallet Interface",
+    description: "การออกแบบและพัฒนาระบบกระเป๋าเงินดิจิทัลที่เน้นความปลอดภัยสูงสุด รองรับการโอนเหรียญหลายสกุลและการแสดงผลประวัติธุรกรรมแบบละเอียด",
+    tags: [
+      { name: "React Native", color: "bg-[#61DAFB] text-slate-900" },
+      { name: "Web3.js", color: "bg-[#F16822] text-white" },
+      { name: "Styled Components", color: "bg-[#DB7093] text-white" },
+      { name: "Firebase", color: "bg-[#FFCA28] text-slate-900" }
+    ],
+    githubUrl: "#",
+    liveUrl: "#",
+    imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1600",
+    stats: {
+      performance: "Secured",
+      stack: "Web3"
+    }
+  }
+];
 
+const ProjectSection = () => {
   return (
-    <div className="min-h-screen bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-2">My Works</h2>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Featured Projects
-          </h1>
-          <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            รวมผลงานการพัฒนาเว็บไซต์ที่เน้นความสวยงาม ประสิทธิภาพ และการใช้งานที่ตอบโจทย์ผู้ใช้ในทุกอุปกรณ์
-          </p>
+    <div className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+      {/* Header */}
+      <div className="max-w-7xl mx-auto mb-20">
+        <div className="inline-flex items-center space-x-2 bg-slate-100 text-slate-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+          <LayersIcon sx={{ fontSize: 18 }} />
+          <span>Selected Works</span>
         </div>
+        <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
+          ผลงานที่คัดสรรมาเพื่อแสดง <br />
+          <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">ทักษะด้าน Frontend</span>
+        </h2>
+      </div>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div 
-              key={project.id}
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden flex flex-col"
-            >
-              {/* Card Preview Area (Mockup Image) */}
-              <div className="h-48 bg-slate-200 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-blue-50 transition-colors duration-300">
-                <div className="transform group-hover:scale-110 transition-transform duration-500">
-                  {project.icon}
-                </div>
-                <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-slate-600 flex items-center gap-1">
-                  <TerminalIcon sx={{ fontSize: 14 }} />
-                  {project.type}
+      {/* Project List */}
+      <div className="max-w-7xl mx-auto space-y-32 md:space-y-48">
+        {projects.map((project, index) => (
+          <div 
+            key={project.id}
+            className={`flex flex-col md:flex-row gap-12 lg:gap-20 items-center`}
+          >
+            {/* Project Image Container */}
+            <div className="w-full md:w-3/5 group relative">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 to-indigo-500/10 rounded-3xl blur-2xl group-hover:opacity-100 transition duration-500 opacity-0"></div>
+              
+              <div className="relative overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 bg-slate-100">
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title}
+                  className="w-full h-auto object-cover transform transition duration-1000 group-hover:scale-105"
+                />
+                
+                {/* Overlay stats */}
+                <div className="absolute top-6 right-6 flex flex-col gap-2 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow-xl border border-white/20">
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Performance</p>
+                    <p className="text-sm font-black text-blue-600">{project.stats.performance}</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Content Area */}
-              <div className="p-6 flex-grow flex flex-col">
-                <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
+              {/* Decorative Number */}
+              <span className={`hidden lg:block absolute -top-16 ${index % 2 !== 0 ? '-right-16' : '-left-16'} text-[160px] font-black text-slate-100 select-none pointer-events-none z-[-1]`}>
+                0{index + 1}
+              </span>
+            </div>
+
+            {/* Project Info */}
+            <div className="w-full md:w-2/5 space-y-8">
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map(tag => (
+                  <span 
+                    key={tag.name} 
+                    className={`${tag.color} text-[10px] font-bold px-3 py-1 rounded-md shadow-sm transform transition hover:-translate-y-0.5`}
+                  >
+                    {tag.name}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 text-sm mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed font-medium">
                   {project.description}
                 </p>
+              </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((t, index) => (
-                    <span 
-                      key={index}
-                      className="px-3 py-1 bg-slate-100 text-slate-500 text-[11px] uppercase tracking-wider rounded-md font-semibold"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex items-center gap-6 pt-6">
+                <a 
+                  href={project.liveUrl}
+                  className="flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition-all group/link relative"
+                >
+                  <span className="flex items-center gap-2">
+                    See More 
+                    <ArrowForwardIcon sx={{ fontSize: 20 }} className="group-hover/link:translate-x-1 transition-transform" />
+                  </span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover/link:w-full"></span>
+                </a>
+                
+                <div className="h-8 w-[1px] bg-slate-200"></div>
 
-                {/* Actions */}
-                <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
-                  <a 
-                    href={project.github}
-                    className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium"
-                  >
-                    <GitHubIcon sx={{ fontSize: 18 }} />
-                    Code
-                  </a>
-                  <a 
-                    href={project.link}
-                    className="flex items-center gap-1 text-blue-600 hover:text-blue-700 transition-colors text-sm font-bold"
-                  >
-                    Live Demo
-                    <LaunchIcon sx={{ fontSize: 18 }} />
-                  </a>
-                </div>
+                <a 
+                  href={project.githubUrl}
+                  className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors"
+                  aria-label="GitHub Repository"
+                >
+                  <GitHubIcon sx={{ fontSize: 24 }} />
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Card_Project
+export default ProjectSection;

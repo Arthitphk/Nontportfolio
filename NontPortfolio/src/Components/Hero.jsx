@@ -16,7 +16,7 @@ const Hero = () => {
     const [isVisible] = useState(true);
 
     return (
-        <div className="h-screen bg-white text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
+        <div className="h-screen bg-gray-50 text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
            
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
                 {/* Background Decorative Elements */}
