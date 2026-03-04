@@ -23,7 +23,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
  return (
-    <nav className="w-full z-50 bg-white/80 backdrop-blur-md shadow-sm dark:bg-slate-900/80 dark:text-white transition-all duration-300">
+    <nav className="w-full z-50 bg-slate-950 backdrop-blur-md shadow-sm  transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
                 
@@ -41,7 +41,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors flex items-center gap-1"
+                                className="px-3 text-slate-200 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors flex items-center gap-1"
                             >
                                 {link.icon}
                                 {link.name}
@@ -50,7 +50,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Social Icons (Desktop) */}
-                    <div className="flex items-center space-x-4 border-l pl-6 border-gray-200 dark:border-gray-700">
+                    <div className="flex items-center text-slate-200 space-x-4 border-l pl-6 border-gray-200 dark:border-gray-700">
                         {socialLinks.map((social, index) => (
                             <a
                                 key={index}

@@ -60,7 +60,7 @@ const projects = [
   }
 ];
 
-const ProjectSection = () => {
+const Project = () => {
   return (
     <div className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* Header */}
@@ -160,4 +160,4 @@ const ProjectSection = () => {
   );
 };
 
-export default ProjectSection;
+export default Project;

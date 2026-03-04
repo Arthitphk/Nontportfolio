@@ -17,12 +17,6 @@ const Footer = () => {
     { name: 'Email', icon: <MailOutlineIcon fontSize="small" />, href: 'mailto:hello@example.com' },
   ];
 
-  const quickLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ];
 
   return (
     <footer className="w-full bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
