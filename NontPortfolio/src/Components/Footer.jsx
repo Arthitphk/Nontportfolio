@@ -53,7 +53,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-100">
               Let's Connect
             </h3>
-            <p className="text-sm">สนใจร่วมงานหรือสอบถามข้อมูลเพิ่มเติม สามารถส่งข้อความมาได้ทันที</p>
+            <p className="text-sm">Have a project in mind or just want to say hello? Feel free to reach out and let's create something amazing together.</p>
             <a 
               href="mailto:hello@example.com"
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg shadow-blue-500/20"
