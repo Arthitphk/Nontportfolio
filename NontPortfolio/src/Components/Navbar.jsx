@@ -28,9 +28,9 @@ const Navbar = () => {
             <div className="flex justify-between items-center h-16">
                 
                 {/* Logo Section */}
-                <div className="flex-shrink-0 flex items-center">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer">
-                        PORTFOLIO
+                <div className="shrink-0 flex items-center">
+                    <span className="text-2xl uppercase font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer">
+                        Nont_Arthit
                     </span>
                 </div>
 
