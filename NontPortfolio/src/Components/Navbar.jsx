@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+
+
 import { GitHub, LinkedIn, Facebook, Menu, Close,Person,Code,Description,ContactPage
 } from '@mui/icons-material';
+import Theme from './Theme';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +36,7 @@ const Navbar = () => {
                         Nont_Arthit
                     </span>
                 </div>
-
+                    
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center space-x-8">
                     <div className="flex space-x-4">
@@ -62,7 +65,9 @@ const Navbar = () => {
                                 {social.icon}
                             </a>
                         ))}
+                        
                     </div>
+                    <Theme/>
                 </div>
 
                 {/* Mobile Menu Button */}
