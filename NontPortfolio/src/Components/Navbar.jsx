@@ -26,7 +26,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
  return (
-    <nav className="w-full z-50 bg-slate-950 backdrop-blur-md shadow-sm  transition-all duration-300">
+    <nav className="w-full z-50 bg-white dark:bg-slate-950 backdrop-blur-md shadow-sm  transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
                 
@@ -44,7 +44,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="px-3 text-slate-200 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors flex items-center gap-1"
+                                className="px-3 dark:text-slate-200 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors flex items-center gap-1"
                             >
                                 {link.icon}
                                 {link.name}
@@ -53,7 +53,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Social Icons (Desktop) */}
-                    <div className="flex items-center text-slate-200 space-x-4 border-l pl-6 border-gray-200 dark:border-gray-700">
+                    <div className="flex items-center dark:text-slate-200 space-x-4 border-l pl-6 border-gray-200 dark:border-gray-700">
                         {socialLinks.map((social, index) => (
                             <a
                                 key={index}
@@ -77,7 +77,9 @@ const Navbar = () => {
                         className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 outline-none"
                     >
                         {isOpen ? <Close /> : <Menu />}
+                        
                     </button>
+                    
                 </div>
             </div>
         </div>
@@ -94,7 +96,7 @@ const Navbar = () => {
                         key={link.name}
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-3 py-4 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center gap-3"
+                        className="block px-3 py-4 rounded-md text-base font-medium dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center gap-3"
                     >
                         <span className="text-blue-600">{link.icon}</span>
                         {link.name}
@@ -112,6 +114,7 @@ const Navbar = () => {
                             {social.icon}
                         </a>
                     ))}
+                    <Theme/>
                 </div>
             </div>
         </div>

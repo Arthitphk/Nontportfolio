@@ -16,7 +16,7 @@ const Hero = () => {
     const [isVisible] = useState(true);
 
     return (
-        <div className="bg-gray-50 text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
+        <div className="bg-gray-50 dark:text-white dark:bg-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
            
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
                 {/* Background Decorative Elements */}
@@ -31,19 +31,19 @@ const Hero = () => {
                     <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
 
                         {/* Main Heading */}
-                        <h1 className="text-4xl md:text-4xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
+                        <h1 className="text-4xl md:text-4xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-6">
                             Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Arthit Chatusor</span><br />
                             เป็น Front-End Developer
                         </h1>
 
                         {/* Subheading */}
-                        <p className="max-w-2xl mx-auto lg:mx-0 text-lg text-slate-600 mb-8 leading-relaxed">
+                        <p className="max-w-2xl mx-auto lg:mx-0 text-lg dark:text-white text-slate-600 mb-8 leading-relaxed">
                             Welcome to my personal website! I'm passionate about creating beautiful and functional web experiences. Feel free to explore my projects and get in touch!
                         </p>
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-                            <button className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all transform hover:-translate-y-1 shadow-lg">
+                            <button className="w-full sm:w-auto px-8 py-4 bg-slate-950 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all transform hover:-translate-y-1 shadow-lg">
                                 <Code />
                                 ดูผลงานของผม
                             </button>

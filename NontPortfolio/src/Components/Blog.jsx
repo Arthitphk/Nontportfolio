@@ -32,16 +32,16 @@ const Blog = () => {
   ];
 
   return (
-    <div className=" bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className=" bg-gray-50 dark:bg-slate-900 py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* ส่วนหัวข้อ (Header Section) */}
         <div className="text-center mb-16">
           <h2 className="text-base font-semibold text-blue-600 tracking-wide uppercase">My Writing</h2>
-          <p className="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
+          <p className="mt-2 text-4xl font-extrabold dark:text-white text-gray-900 sm:text-5xl">
             บทความและผลงานการเขียน
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+          <p className="mt-4 max-w-2xl text-xl dark:text-white text-gray-500 mx-auto">
             รวบรวมความรู้ ประสบการณ์ และเทคนิคต่างๆ ที่ผมได้เรียนรู้ระหว่างการทำงานในสาย Dev
           </p>
         </div>

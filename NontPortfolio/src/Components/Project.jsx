@@ -62,14 +62,11 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <div className="bg-gray-50 dark:bg-slate-900 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-20">
-        <div className="inline-flex items-center space-x-2 bg-slate-100 text-slate-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-          <LayersIcon sx={{ fontSize: 18 }} />
-          <span>Selected Works</span>
-        </div>
-        <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
+        
+        <h2 className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight">
           ผลงานที่คัดสรรมาเพื่อแสดง <br />
           <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">ทักษะด้าน Frontend</span>
         </h2>
@@ -110,7 +107,7 @@ const Project = () => {
 
             {/* Project Info */}
             <div className="w-full md:w-2/5 space-y-8">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 ">
                 {project.tags.map(tag => (
                   <span 
                     key={tag.name} 
@@ -122,10 +119,10 @@ const Project = () => {
               </div>
               
               <div className="space-y-4">
-                <h3 className="text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+                <h3 className="text-3xl lg:text-4xl font-extrabold dark:text-white text-slate-900 leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 text-lg leading-relaxed font-medium">
+                <p className="text-slate-600  dark:text-white text-lg leading-relaxed font-medium">
                   {project.description}
                 </p>
               </div>
@@ -133,7 +130,7 @@ const Project = () => {
               <div className="flex items-center gap-6 pt-6">
                 <a 
                   href={project.liveUrl}
-                  className="flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition-all group/link relative"
+                  className="flex items-center gap-2 text-slate-900 dark:text-white font-bold hover:text-blue-600 transition-all group/link relative"
                 >
                   <span className="flex items-center gap-2">
                     See More 

@@ -71,14 +71,14 @@ const TechStack = () => {
   ];
 
   return (
-    <div className=" bg-slate-50 py-20 px-4 font-sans mb-20">
+    <div className=" dark:bg-slate-900 py-20 px-4 font-sans ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-slate-800 mb-4 tracking-tight">
+          <h2 className="text-4xl font-extrabold dark:text-white text-slate-800 mb-4 tracking-tight">
             My Tech Stack
           </h2>
           <div className="w-24 h-1.5 bg-indigo-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-500 dark:text-white text-lg max-w-2xl mx-auto leading-relaxed">
             รวบรวมเทคโนโลยีที่เลือกใช้เป็นหลักในการพัฒนาเว็บแอปพลิเคชัน
           </p>
         </div>
