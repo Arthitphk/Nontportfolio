@@ -66,7 +66,7 @@ const Hero = () => {
                             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl">
                                 {/* Replace src with your image URL */}
                                 <img
-                                    src="src\Image\profile-img.png"
+                                    src="src\assets\Image\profile-img.png"
                                     alt="Profile"
                                     className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                                 />
