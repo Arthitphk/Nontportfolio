@@ -21,7 +21,7 @@ const Blog = () => {
       excerpt: "Bootstrap เป็น Framework ที่ใช้สำหรับสร้าง Responsive Website โดยที่เราไม่ต้องไปยุ่งกับ CSS กับ JavaScript เพราะใน Bootstrap ออกแบบมาให้แล้ว ช่วยลดเวลาในการทำ Components ต่าง ๆ",
       date: "15 พ.ค. 2024",
       readTime: "1,919",
-      category: "Frontend",
+      category: "Design",
       image: "https://www.borntodev.com/wp-content/uploads/2024/04/bootstrap-grid-blog-scaled.webp",
       link: "https://www.borntodev.com/2024/04/25/grid-system-%E0%B9%83%E0%B8%99-bootstrap/"
     },
@@ -53,11 +53,11 @@ const Blog = () => {
         </div>
 
         {/* รายการบทความ (Blog Grid) */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
           {blogPosts.map((post) => (
             <article 
               key={post.id} 
-              className="flex flex-col overflow-hidden rounded-2xl shadow-lg bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="flex flex-col bg-gradient-to-tl from-[#1e293b] via-[#6366f1] to-[#71717a]  overflow-hidden rounded-2xl shadow-lg  transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* รูปภาพหน้าปก */}
               <div className="flex-shrink-0 relative group">
@@ -80,17 +80,17 @@ const Blog = () => {
               {/* เนื้อหาบทความ */}
               <div className="flex-1 p-6 flex flex-col justify-between">
                 <div className="flex-1">
-                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <div className="flex items-center text-sm text-white mb-3">
                     <RemoveRedEyeIcon className="mr-1" style={{ fontSize: 16 }} />
                     <span>{post.readTime}</span>
                     <span className="mx-2">•</span>
                     <span>{post.date}</span>
                   </div>
                   <a href={post.link} className="block mt-2">
-                    <p className="text-xl font-bold text-gray-900  hover:text-blue-600 transition-colors line-clamp-2">
+                    <p className="text-xl font-bold text-white  hover:text-blue-600 transition-colors line-clamp-2">
                       {post.title}
                     </p>
-                    <p className="mt-3 text-base text-gray-500 line-clamp-3">
+                    <p className="mt-3 text-base text-gray-300 line-clamp-3">
                       {post.excerpt}
                     </p>
                   </a>
@@ -100,7 +100,7 @@ const Blog = () => {
                 <div className="mt-6">
                   <a
                     href={post.link}
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+                    className="inline-flex items-center text-sm font-semibold text-gray-600-800 hover:text-blue-200 transition-colors"
                   >
                     อ่านเพิ่มเติม
                     <ArrowForward className="ml-1" style={{ fontSize: 16 }} />
