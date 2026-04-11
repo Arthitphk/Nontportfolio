@@ -100,7 +100,7 @@ const Blog = () => {
                 <div className="mt-6">
                   <a
                     href={post.link}
-                    className="inline-flex items-center text-sm font-semibold text-gray-600-800 hover:text-blue-200 transition-colors"
+                    className="inline-flex items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors"
                   >
                     อ่านเพิ่มเติม
                     <ArrowForward className="ml-1" style={{ fontSize: 16 }} />

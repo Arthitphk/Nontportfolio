@@ -1,25 +1,33 @@
-import LayersIcon from '@mui/icons-material/Layers';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+// นำเข้าไอคอนจาก Material UI
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageIcon from '@mui/icons-material/Language';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const projects = [
   {
     id: 1,
-    title: "Modern E-Commerce Experience",
-    description: "แพลตฟอร์มอีคอมเมิร์ซระดับไฮเอนด์ที่เน้นความเร็วและการใช้งานที่ลื่นไหล พัฒนาด้วย Next.js และเชื่อมต่อระบบตะกร้าสินค้าแบบ Real-time พร้อมระบบจัดการสต็อกสินค้าที่ซับซ้อน",
+    title: "CodingTech Website",
+    description: "Project ที่ใช้ React และ TypeScript ในการพัฒนา โดยเน้นไปที่การรับข้อมูลจาก API เพื่อมาประมวลผลและแสดงผลบนอินเทอร์เฟซที่เราออกแบบมาครับ",
     tags: [
-      { name: "Next.js", color: "bg-black text-white" },
+      { name: "React.js", color: "bg-[#3178C6] text-white" },
       { name: "TypeScript", color: "bg-[#3178C6] text-white" },
       { name: "Tailwind CSS", color: "bg-[#38BDF8] text-white" },
-      { name: "Redux", color: "bg-[#764ABC] text-white" }
+      { name: "Axios", color: "bg-[#764ABC] text-white" }
     ],
     githubUrl: "#",
     liveUrl: "#",
-    imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1600",
+    images: [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1600"
+    ],
     stats: {
       performance: "98/100",
-      stack: "Full Stack"
+      stack: "Frontend"
     }
   },
   {
@@ -34,7 +42,12 @@ const projects = [
     ],
     githubUrl: "#",
     liveUrl: "#",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=1600",
+    images: [
+      "https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1504868584819-f8e90526354c?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1600"
+    ],
     stats: {
       performance: "Interactive",
       stack: "AI Integrated"
@@ -52,7 +65,12 @@ const projects = [
     ],
     githubUrl: "#",
     liveUrl: "#",
-    imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1600",
+    images: [
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1633155545042-47adc47446e2?auto=format&fit=crop&q=80&w=1600",
+      "https://images.unsplash.com/photo-1642104704074-907c0698bcd9?auto=format&fit=crop&q=80&w=1600"
+    ],
     stats: {
       performance: "Secured",
       stack: "Web3"
@@ -60,54 +78,119 @@ const projects = [
   }
 ];
 
-const Project = () => {
+// คอมโพเนนต์เลื่อนรูปภาพ (Image Carousel)
+const ImageCarousel = ({ images, title }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = (e) => {
+    e.preventDefault();
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = (e) => {
+    e.preventDefault();
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
   return (
-    <div className="bg-gray-50 dark:bg-slate-900 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
-      {/* Header */}
-      <div className="max-w-7xl mx-auto mb-20">
-        
-        <h2 className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight">
-          ผลงานที่คัดสรรมาเพื่อแสดง <br />
-          <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">ทักษะด้าน Frontend</span>
-        </h2>
+    <div className="relative group w-full h-full overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 bg-slate-100">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt={`${title} - slide ${currentIndex + 1}`}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-full object-cover aspect-video"
+        />
+      </AnimatePresence>
+
+      {/* ปุ่มนำทาง (Navigation Buttons) */}
+      <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <button
+          onClick={prevSlide}
+          className="p-2 rounded-full bg-white/80 backdrop-blur text-slate-900 hover:bg-white transition-colors shadow-lg flex items-center justify-center"
+          aria-label="Previous image"
+        >
+          <ChevronLeftIcon />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="p-2 rounded-full bg-white/80 backdrop-blur text-slate-900 hover:bg-white transition-colors shadow-lg flex items-center justify-center"
+          aria-label="Next image"
+        >
+          <ChevronRightIcon />
+        </button>
       </div>
 
-      {/* Project List */}
+      {/* จุดแสดงสถานะ (Indicators) */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              idx === currentIndex ? "w-6 bg-blue-600" : "bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Project = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+      {/* ส่วนหัว (Header) */}
+      <div className="max-w-7xl mx-auto mb-20">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight"
+        >
+          ผลงานที่คัดสรรมาเพื่อแสดง <br />
+          <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">ทักษะด้าน Frontend</span>
+        </motion.h2>
+      </div>
+
+      {/* รายการโปรเจกต์ (Project List) */}
       <div className="max-w-7xl mx-auto space-y-32 md:space-y-48">
         {projects.map((project, index) => (
-          <div 
+          <motion.div 
             key={project.id}
-            className={`flex flex-col md:flex-row gap-12 lg:gap-20 items-center`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 lg:gap-20 items-center`}
           >
-            {/* Project Image Container */}
+            {/* พื้นที่แสดงรูปภาพแบบ Carousel */}
             <div className="w-full md:w-3/5 group relative">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 to-indigo-500/10 rounded-3xl blur-2xl group-hover:opacity-100 transition duration-500 opacity-0"></div>
+              <div className="absolute -inset-4 bg-linear-to-tr from-blue-500/10 to-indigo-500/10 rounded-3xl blur-2xl group-hover:opacity-100 transition duration-500 opacity-0"></div>
               
-              <div className="relative overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 bg-slate-100">
-                <img 
-                  src={project.imageUrl} 
-                  alt={project.title}
-                  className="w-full h-auto object-cover transform transition duration-1000 group-hover:scale-105"
-                />
-                
-                {/* Overlay stats */}
-                <div className="absolute top-6 right-6 flex flex-col gap-2 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow-xl border border-white/20">
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Performance</p>
-                    <p className="text-sm font-black text-blue-600">{project.stats.performance}</p>
-                  </div>
+              <ImageCarousel images={project.images} title={project.title} />
+
+              {/* สถานะประสิทธิภาพ (Overlay stats) */}
+              <div className="absolute top-6 right-6 flex flex-col gap-2 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                <div className="bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow-xl border border-white/20">
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Performance</p>
+                  <p className="text-sm font-black text-blue-600">{project.stats.performance}</p>
                 </div>
               </div>
 
-              {/* Decorative Number */}
-              <span className={`hidden lg:block absolute -top-16 ${index % 2 !== 0 ? '-right-16' : '-left-16'} text-[160px] font-black text-slate-100 select-none pointer-events-none z-[-1]`}>
+              {/* ตัวเลขประดับ (Decorative Number) */}
+              <span className={`hidden lg:block absolute -top-16 ${index % 2 !== 0 ? '-left-16' : '-right-16'} text-[160px] font-black text-slate-100 dark:text-slate-800/50 select-none pointer-events-none z-[-1]`}>
                 0{index + 1}
               </span>
             </div>
 
-            {/* Project Info */}
+            {/* ข้อมูลโปรเจกต์ (Project Info) */}
             <div className="w-full md:w-2/5 space-y-8">
-              <div className="flex flex-wrap gap-2 ">
+              <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
                   <span 
                     key={tag.name} 
@@ -122,7 +205,7 @@ const Project = () => {
                 <h3 className="text-3xl lg:text-4xl font-extrabold dark:text-white text-slate-900 leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-slate-600  dark:text-white text-lg leading-relaxed font-medium">
+                <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
                   {project.description}
                 </p>
               </div>
@@ -134,23 +217,23 @@ const Project = () => {
                 >
                   <span className="flex items-center gap-2">
                     See More 
-                    <ArrowForwardIcon sx={{ fontSize: 20 }} className="group-hover/link:translate-x-1 transition-transform" />
+                    <ArrowForwardIcon fontSize="small" className="group-hover/link:translate-x-1 transition-transform" />
                   </span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover/link:w-full"></span>
                 </a>
                 
-                <div className="h-8 w-[1px] bg-slate-200"></div>
+                <div className="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
 
                 <a 
                   href={project.githubUrl}
-                  className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors"
+                  className="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
                   aria-label="GitHub Repository"
                 >
-                  <GitHubIcon sx={{ fontSize: 24 }} />
+                  <GitHubIcon fontSize="medium" />
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
