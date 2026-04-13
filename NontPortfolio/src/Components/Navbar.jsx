@@ -28,6 +28,7 @@ const Navbar = () => {
     ];
 
     const toggleMenu = () => setIsOpen(!isOpen);
+    
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 20) {
@@ -46,7 +47,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-slate-900/80' : 'bg-transparent'}`}>
+            <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-[#1c1c22]/80' : 'bg-white dark:bg-[#1c1c22] border-t border-gray-100 dark:border-gray-800 shadow-lg'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div className="flex justify-between items-center h-16">
 
@@ -109,7 +110,7 @@ const Navbar = () => {
                     className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                 >
-                    <div className="px-4 pt-2 pb-6 space-y-1 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800 shadow-lg">
+                    <div className= {`px-4 pt-2 pb-6 space-y-1  ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-slate-900/80' : 'bg-transparent'}`}>
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
@@ -123,7 +124,7 @@ const Navbar = () => {
                         ))}
 
                         {/* Social Icons (Mobile) */}
-                        <div className="flex justify-center space-x-8 pt-6 border-t border-gray-100 dark:border-gray-800 mt-4">
+                        <div className="flex justify-center space-x-8 pt-6 border-t border-gray-100 dark:border-gray-800 mt-4 ">
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}

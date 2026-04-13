@@ -12,13 +12,17 @@ import {
 } from '@mui/icons-material';
 
 
+
+
+
+
 const Hero = () => {
     const [isVisible] = useState(true);
 
     return (
-        <div className=" h-lvh bg-gray-50 dark:text-white dark:bg-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
+        <div className=" h-lvh bg-gray-50 dark:text-white dark:bg-[#1c1c22] font-sans selection:bg-indigo-100 selection:text-indigo-700">
            
-            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
+            <section className='relative pt-80 pb-20  md:pb-32 px-6 overflow-hidden'>
                 {/* Background Decorative Elements */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
                     <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-100 rounded-full blur-[120px] opacity-60"></div>
@@ -79,6 +83,7 @@ const Hero = () => {
 
 
             </section>
+             
         </div>
     );
 };
