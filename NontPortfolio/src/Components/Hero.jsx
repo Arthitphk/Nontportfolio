@@ -1,17 +1,4 @@
 import { useState } from 'react';
-import {
-    GitHub,
-    LinkedIn,
-    Email,
-    KeyboardArrowDown,
-    Description,
-    Code,
-    RocketLaunch,
-    Terminal,
-    Verified
-} from '@mui/icons-material';
-
-
 
 
 
@@ -20,9 +7,9 @@ const Hero = () => {
     const [isVisible] = useState(true);
 
     return (
-        <div className=" h-lvh bg-gray-50 dark:text-white dark:bg-[#1c1c22] font-sans selection:bg-indigo-100 selection:text-indigo-700">
+        <div className=" h-lvh bg-gray-50 dark:text-white dark:bg-[#1c1c22] font-sans selection:bg-indigo-100 selection:text-indigo-700 ">
            
-            <section className='relative pt-80 pb-20  md:pb-32 px-6 overflow-hidden'>
+            <section className='relative pt-80 pb-20  md:pb-32 px-6 overflow-hidden '>
                 {/* Background Decorative Elements */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
                     <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-100 rounded-full blur-[120px] opacity-60"></div>
@@ -47,12 +34,12 @@ const Hero = () => {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-                            <button className="w-full sm:w-auto px-8 py-4 bg-slate-950 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all transform hover:-translate-y-1 shadow-lg">
-                                <Code />
+                            <button className="w-full sm:w-auto px-8 py-4 bg-slate-950 text-white rounded-4xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all transform hover:-translate-y-1 shadow-lg">
+                               
                                 ดูผลงานของผม
                             </button>
-                            <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 transition-all transform hover:-translate-y-1 shadow-sm">
-                                <Description />
+                            <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-4xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 transition-all transform hover:-translate-y-1 shadow-sm">
+                               
                                 ดาวน์โหลด Resume
                             </button>
                         </div>
@@ -63,11 +50,11 @@ const Hero = () => {
                     <div className="flex-1 flex justify-center order-1 lg:order-2">
                         <div className="relative group">
                             {/* Decorative Rings */}
-                            <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-blue-400 rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500"></div>
-                            <div className="absolute -inset-0.5 bg-gradient-to-tr from-indigo-500 to-blue-400 rounded-[2.5rem] opacity-10 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-blue-400 rounded-[15rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500"></div>
+                            <div className="absolute -inset-0.5 bg-gradient-to-tr from-indigo-500 to-blue-400 rounded-[15rem] opacity-10 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             {/* Image Container */}
-                            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl">
+                            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-[20rem] overflow-hidden border-4 border-white shadow-2xl">
                                 {/* Replace src with your image URL */}
                                 <img
                                     src="src\assets\Image\profile-img.png"
