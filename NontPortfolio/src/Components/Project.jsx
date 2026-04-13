@@ -20,15 +20,12 @@ const projects = [
     githubUrl: "#",
     liveUrl: "#",
     images: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1600"
+      "src/assets/Image/PJ_1/Project1img.png",
+      "src/assets/Image/PJ_1/fedbcimage2.png",
+      "src/assets/Image/PJ_1/FEDBCIMGE3.png",
+      "src/assets/Image/PJ_1/FEDBCIMG4.png"
     ],
-    stats: {
-      performance: "98/100",
-      stack: "Frontend"
-    }
+    
   },
   {
     id: 2,
@@ -174,13 +171,7 @@ const Project = () => {
               
               <ImageCarousel images={project.images} title={project.title} />
 
-              {/* สถานะประสิทธิภาพ (Overlay stats) */}
-              <div className="absolute top-6 right-6 flex flex-col gap-2 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 z-10">
-                <div className="bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow-xl border border-white/20">
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Performance</p>
-                  <p className="text-sm font-black text-blue-600">{project.stats.performance}</p>
-                </div>
-              </div>
+              
 
               {/* ตัวเลขประดับ (Decorative Number) */}
               <span className={`hidden lg:block absolute -top-16 ${index % 2 !== 0 ? '-left-16' : '-right-16'} text-[160px] font-black text-slate-100 dark:text-slate-800/50 select-none pointer-events-none z-[-1]`}>
