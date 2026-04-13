@@ -71,7 +71,7 @@ const TechStack = () => {
   ];
 
   return (
-    <div className=" dark:bg-slate-900 py-20 px-4 font-sans ">
+    <div className=" dark:bg-[#1c1c22] py-20 px-4 font-sans ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold dark:text-white text-slate-800 mb-4 tracking-tight">

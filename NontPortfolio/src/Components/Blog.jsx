@@ -38,7 +38,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className=" bg-gray-50 dark:bg-slate-900 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className=" bg-gray-50 dark:bg-[#1c1c22] py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* ส่วนหัวข้อ (Header Section) */}
