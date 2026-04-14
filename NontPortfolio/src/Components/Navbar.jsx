@@ -22,9 +22,9 @@ const Navbar = () => {
 
     // ข้อมูล Social Media
     const socialLinks = [
-        { icon: <GitHub />, href: 'https://github.com', color: 'hover:text-gray-400' },
-        { icon: <LinkedIn />, href: 'https://linkedin.com', color: 'hover:text-blue-600' },
-        { icon: <Facebook />, href: 'https://facebook.com', color: 'hover:text-blue-500' },
+        { icon: <GitHub />, href: 'https://github.com', color: 'hover:text-[#22c55e]' },
+        { icon: <LinkedIn />, href: 'https://linkedin.com', color: 'hover:text-[#22c55e]' },
+        { icon: <Facebook />, href: 'https://facebook.com', color: 'hover:text-[#22c55e]' },
     ];
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -65,7 +65,7 @@ const Navbar = () => {
                                     <a
                                         key={link.name}
                                         href={link.href}
-                                        className="px-3 font-jetbrains dark:text-slate-200 py-2 rounded-md text-[1.1rem] font-medium hover:text-blue-600 transition-colors flex items-center gap-1"
+                                        className="px-3 font-jetbrains dark:text-slate-200 py-2 rounded-md text-[1.1rem] font-medium hover:text-[#22c55e] transition-colors flex items-center gap-1"
                                     >
                                         {link.icon}
                                         {link.name}
@@ -95,7 +95,7 @@ const Navbar = () => {
                         <div className="md:hidden flex items-center">
                             <button
                                 onClick={toggleMenu}
-                                className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 outline-none"
+                                className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-[#22c55e] dark:hover:bg-gray-800 outline-none"
                             >
                                 {isOpen ? <Close /> : <Menu />}
 
@@ -144,3 +144,4 @@ const Navbar = () => {
 };
 
 export default Navbar
+
