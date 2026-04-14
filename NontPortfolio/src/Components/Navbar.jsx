@@ -53,8 +53,8 @@ const Navbar = () => {
 
                         {/* Logo Section */}
                         <div className="shrink-0 flex items-center">
-                            <span className="text-2xl font-jetbrains uppercase font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer">
-                                Nont Arthit
+                            <span className="text-2xl font-jetbrains uppercase font-bold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent cursor-pointer">
+                                Nont&Arthit
                             </span>
                         </div>
 

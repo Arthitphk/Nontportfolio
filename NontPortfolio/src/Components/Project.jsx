@@ -140,7 +140,7 @@ const ImageCarousel = ({ images, title }) => {
 
 const Project = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#1c1c22] py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <div className="py-16 md:py-20 px-4 md:px-8 bg-gray-50 dark:bg-[#1c1c22] lg:px-24 overflow-hidden">
       {/* ส่วนหัว (Header) */}
       <div className="max-w-7xl mx-auto mb-20">
         <motion.h2 
