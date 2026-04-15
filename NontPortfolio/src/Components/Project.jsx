@@ -147,10 +147,10 @@ const Project = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight"
+          className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
         >
           ผลงานที่คัดสรรมาเพื่อแสดง <br />
-          <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">ทักษะด้าน Frontend</span>
+          <span className="text-blue-600 underline decoration-blue-100 underline-offset-8 font-jetbrains ">ทักษะด้าน Frontend</span>
         </motion.h2>
       </div>
 
@@ -185,7 +185,7 @@ const Project = () => {
                 {project.tags.map(tag => (
                   <span 
                     key={tag.name} 
-                    className={`${tag.color} text-[10px] font-bold px-3 py-1 rounded-md shadow-sm transform transition hover:-translate-y-0.5`}
+                    className={`${tag.color} font-jetbrains text-[10px] font-bold px-3 py-1 rounded-md shadow-sm transform transition hover:-translate-y-0.5`}
                   >
                     {tag.name}
                   </span>
@@ -193,10 +193,10 @@ const Project = () => {
               </div>
               
               <div className="space-y-4">
-                <h3 className="text-3xl lg:text-4xl font-extrabold dark:text-white text-slate-900 leading-tight">
+                <h3 className="font-jetbrains text-3xl lg:text-4xl font-extrabold dark:text-white text-slate-900 leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
+                <p className="font-jetbrains text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
                   {project.description}
                 </p>
               </div>
