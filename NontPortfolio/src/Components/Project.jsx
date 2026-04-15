@@ -129,7 +129,7 @@ const ImageCarousel = ({ images, title }) => {
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             className={`w-2 h-2 rounded-full transition-all ${
-              idx === currentIndex ? "w-6 bg-blue-600" : "bg-white/50"
+              idx === currentIndex ? "w-6 bg-[#22c55e]" : "bg-white/50"
             }`}
           />
         ))}
@@ -149,8 +149,8 @@ const Project = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
         >
-          ผลงานที่คัดสรรมาเพื่อแสดง <br />
-          <span className="text-blue-600 underline decoration-blue-100 underline-offset-8 font-jetbrains ">ทักษะด้าน Frontend</span>
+          
+          <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">Selected Work</span>
         </motion.h2>
       </div>
 

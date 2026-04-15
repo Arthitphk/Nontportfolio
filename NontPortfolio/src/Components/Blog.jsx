@@ -20,7 +20,7 @@ const Blog = () => {
       title: "เจาะลึกการใช้งาน Grid System ใน Bootstrap",
       excerpt: "Bootstrap เป็น Framework ที่ใช้สำหรับสร้าง Responsive Website โดยที่เราไม่ต้องไปยุ่งกับ CSS กับ JavaScript เพราะใน Bootstrap ออกแบบมาให้แล้ว ช่วยลดเวลาในการทำ Components ต่าง ๆ",
       date: "15 พ.ค. 2024",
-      readTime: "1,919",
+      readTime: "1,932",
       category: "Design",
       image: "https://www.borntodev.com/wp-content/uploads/2024/04/bootstrap-grid-blog-scaled.webp",
       link: "https://www.borntodev.com/2024/04/25/grid-system-%E0%B9%83%E0%B8%99-bootstrap/"
@@ -30,10 +30,10 @@ const Blog = () => {
       title: "ทำไม Tailwind CSS ถึงเปลี่ยนโลกการเขียน CSS ของผม",
       excerpt: "TailwindCSS เป็น CSS framework ตัวหนึ่งที่ใช้งานแบบ Utility-First แต่ละ Class จะมีคุณสมบัติย่อย ๆ ของ CSS เช่น Color, Spacing, Typography, Shadows โดยนำไปใช้ได้เลยและไม่ต้องสร้างชื่อ Class",
       date: "10 พ.ค. 2024",
-      readTime: "1,301",
+      readTime: "1,305",
       category: "Design",
       image: "https://www.borntodev.com/wp-content/uploads/2024/04/tailwind-card-fb-jpg.webp",
-      link: "#"
+      link: "https://www.borntodev.com/2024/04/17/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-tailwindcss/"
     }
   ];
 
@@ -43,7 +43,7 @@ const Blog = () => {
         
         {/* ส่วนหัวข้อ (Header Section) */}
         <div className="text-center mb-16">
-          <h2 className="text-base font-semibold text-blue-600 tracking-wide uppercase font-jetbrains">My Writing</h2>
+          <h2 className="text-base font-semibold text-[#ADFF2F] tracking-wide uppercase font-jetbrains">My Writing</h2>
           <p className="mt-2 text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">
             บทความและผลงานการเขียน
           </p>
@@ -57,7 +57,7 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <article 
               key={post.id} 
-              className="flex flex-col bg-gradient-to-tl from-[#1e293b] via-[#6366f1] to-[#71717a]  overflow-hidden rounded-2xl shadow-lg  transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="flex flex-col dark:bg-[#27272c]  overflow-hidden rounded-2xl shadow-lg  transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* รูปภาพหน้าปก */}
               <div className="flex-shrink-0 relative group">
@@ -70,7 +70,7 @@ const Blog = () => {
                   <Launch className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="absolute top-4 left-4 ">
-                  <span className=" font-jetbrains inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100  text-blue-800 shadow-sm">
+                  <span className=" font-jetbrains inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-[#22c55e]/10 text-[#ADFF2F] shadow-sm">
                     <Category className="mr-1" style={{ fontSize: 14 }} />
                     {post.category}
                   </span>
@@ -87,7 +87,7 @@ const Blog = () => {
                     <span>{post.date}</span>
                   </div>
                   <a href={post.link} className="block mt-2">
-                    <p className="text-xl font-jetbrains font-bold text-white  hover:text-blue-600 transition-colors line-clamp-2">
+                    <p className="text-xl font-jetbrains font-bold text-white  hover:text-[#ADFF2F] transition-colors line-clamp-2">
                       {post.title}
                     </p>
                     <p className="mt-3 font-jetbrains text-base text-gray-300 line-clamp-3">
@@ -100,7 +100,7 @@ const Blog = () => {
                 <div className="mt-6">
                   <a
                     href={post.link}
-                    className="inline-flex font-jetbrains items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors"
+                    className="inline-flex font-jetbrains items-center text-sm font-semibold text-white hover:text-[#ADFF2F] transition-colors"
                   >
                     อ่านเพิ่มเติม
                     <ArrowForward className="ml-1" style={{ fontSize: 16 }} />

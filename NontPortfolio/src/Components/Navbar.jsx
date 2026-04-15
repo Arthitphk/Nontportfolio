@@ -92,10 +92,10 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <div className="md:hidden flex items-center">
+                        <div className="md:hidden flex items-center ">
                             <button
                                 onClick={toggleMenu}
-                                className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-[#22c55e] dark:hover:bg-gray-800 outline-none"
+                                className="p-2 rounded-[0.8rem] text-gray-600 dark:text-gray-300  border-[#27272c] border-2 hover:bg-[#27272c] outline-none"
                             >
                                 {isOpen ? <Close /> : <Menu />}
 
