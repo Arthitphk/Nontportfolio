@@ -22,23 +22,30 @@ const Hero = () => {
                     <div className="flex-1 text-center p-5 lg:text-left order-2  lg:order-1">
 
                         {/* Main Heading */}
-                        <h1 className=" font-jetbrains  text-2xl md:text-4xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-6">
-                            Hello, I'm <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">Arthit Chatusor</span>,
-                            Front-End Developer 
+                        <h1 className=" font-jetbrains   text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight lg:mb-6">
+                           Hello, I'm
+                        </h1>
+
+                        <h1 className=" font-jetbrains  text-2xl md:text-4xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight lg:mb-6">
+                            Arthit Chatusor
+                        </h1>
+
+                        <h1 className=" font-jetbrains  text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight lg:mb-6">
+                           <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent"> Front-End Developer</span>
                         </h1>
 
                         {/* Subheading */}
-                        <p className="font-jetbrains  max-w-2xl mx-auto lg:mx-0 text-lg dark:text-white text-slate-600 mb-8 leading-relaxed">
+                        <p className="font-jetbrains  max-w-2xl mx-auto lg:mx-0 lg:text-lg text-sm  dark:text-white text-slate-600 mb-8 leading-relaxed">
                             Welcome to my personal website! I'm passionate about creating beautiful and functional web experiences. Feel free to explore my projects and get in touch!
                         </p>
-
+                                
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap items-center justify-center xl:justify-start gap-3">
-                            <button className="font-jetbrains inline-flex items-center justify-center whitespace-nowrap rounded-full text-base ring-offset-white transition-colors bg-accent hover:bg-accent-hover y h-[44px] px-6 py-2 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] dark:text-black/70 text-white font-bold">
+                            <button className="font-jetbrains cursor-pointer inline-flex items-center justify-center whitespace-nowrap rounded-full text-base ring-offset-white transition-colors bg-accent hover:bg-accent-hover y h-[44px] px-6 py-2 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] dark:text-black/70 text-white font-bold">
                                <FileCopyIcon/>
                                 Projects
                             </button>
-                            <button className="font-jetbrains group px-6 py-3 border-2 border-black/20 dark:border-white/20 rounded-full font-semibold dark:text-white text-black/80 transition-all duration-300 hover:border-[#22c55e] dark:hover:border-[#ADFF2F] hover:text-[#22c55e] dark:hover:text-[#ADFF2F] hover:scale-105 text-sm">
+                            <button className="font-jetbrains cursor-pointer group px-6 py-3 border-2 border-black/20 dark:border-white/20 rounded-full font-semibold dark:text-white text-black/80 transition-all duration-300 hover:border-[#22c55e] dark:hover:border-[#ADFF2F] hover:text-[#22c55e] dark:hover:text-[#ADFF2F] hover:scale-105 text-sm">
                                <ArrowCircleDownIcon />
                                 My Resume
                             </button>

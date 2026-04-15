@@ -107,10 +107,10 @@ const Navbar = () => {
 
                 {/* Mobile Navigation Menu */}
                 <div
-                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    className={`font-jetbrains md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                 >
-                    <div className= {`px-4 pt-2 pb-6 space-y-1  ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-slate-900/80' : 'bg-transparent'}`}>
+                    <div className= {`px-4 pt-2 pb-6 space-y-1  ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-[#1c1c22]/80' : 'bg-transparent'}`}>
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
@@ -129,7 +129,7 @@ const Navbar = () => {
                                 <a
                                     key={index}
                                     href={social.href}
-                                    className={`text-gray-600 dark:text-gray-300 ${social.color}`}
+                                    className={` text-gray-600 dark:text-gray-300 ${social.color}`}
                                 >
                                     {social.icon}
                                 </a>
