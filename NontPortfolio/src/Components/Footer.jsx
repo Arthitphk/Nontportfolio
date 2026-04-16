@@ -11,9 +11,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'GitHub', icon: <GitHubIcon fontSize="small" />, href: 'https://github.com' },
+    { name: 'GitHub', icon: <GitHubIcon fontSize="small" />, href: 'https://github.com/Arthitphk' },
     { name: 'LinkedIn', icon: <LinkedInIcon fontSize="small" />, href: 'https://linkedin.com' },
-    { name: 'Twitter', icon: <TwitterIcon fontSize="small" />, href: 'https://twitter.com' },
     { name: 'Email', icon: <MailOutlineIcon fontSize="small" />, href: 'mailto:hello@example.com' },
   ];
 
@@ -23,10 +22,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           
+
+          
           {/* Brand Section */}
           <div className="flex flex-col space-y-4">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
-              Dev<span className="text-blue-600">Portfolio</span>
+              Dev<span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">Nont.Arthit</span>
             </h2>
             <p className="max-w-xs text-sm leading-relaxed">
               สร้างสรรค์ประสบการณ์ดิจิทัลด้วยความประณีตและเทคโนโลยีที่ทันสมัย มุ่งมั่นที่จะเปลี่ยนไอเดียให้เป็นความจริง
@@ -38,7 +39,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1"
+                  className="p-2 flex items-center justify-center rounded-full  dark:bg-[#27272c] hover:bg-[#22c55e] hover:text-white dark:hover:bg-[#22c55e] transition-all duration-300 transform hover:-translate-y-1"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -56,7 +57,7 @@ const Footer = () => {
             <p className="text-sm">Have a project in mind or just want to say hello? Feel free to reach out and let's create something amazing together.</p>
             <a 
               href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg shadow-blue-500/20"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-[#22c55e] rounded-lg hover:[#ADFF2F] transition-colors duration-200 shadow-lg shadow-blue-500/20"
             >
               Hire Me <LaunchIcon sx={{ fontSize: 16, ml: 1 }} />
             </a>

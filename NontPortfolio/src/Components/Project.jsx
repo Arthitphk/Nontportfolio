@@ -90,7 +90,7 @@ const ImageCarousel = ({ images, title }) => {
   };
 
   return (
-    <div className="relative group w-full h-full overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 bg-slate-100">
+    <div className="relative group w-full h-full overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(8,112,184,0.1)] border border-slate-100 bg-slate-100">
       <AnimatePresence mode="wait">
         <motion.img
           key={currentIndex}
@@ -143,14 +143,25 @@ const Project = () => {
     <div className="py-16 md:py-20 px-4 md:px-8 bg-gray-50 dark:bg-[#1c1c22] lg:px-24 overflow-hidden">
       {/* ส่วนหัว (Header) */}
       <div className="max-w-7xl mx-auto mb-20">
+        
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} 
+        >
+          <span className='text-[11px] font-semibold uppercase tracking-[0.2em] bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
+          Portfolio
+        </span>
+        </motion.p>
+
         <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
         >
           
-          <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">Selected Work</span>
+          <span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">Selected Work</span>
         </motion.h2>
       </div>
 
@@ -163,7 +174,7 @@ const Project = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 lg:gap-20 items-center`}
+            className={`flex flex-col md:flex-row gap-12 lg:gap-20 items-center`}
           >
             {/* พื้นที่แสดงรูปภาพแบบ Carousel */}
             <div className="w-full md:w-3/5 group relative">

@@ -33,13 +33,13 @@ const Theme = () => {
  return (
            <button 
               onClick={toggleTheme}
-              className="p-2 rounded-lg cursor-pointer bg-slate-100 dark:bg-[#1c1c22] hover:ring-2 ring-indigo-500 transition-all flex items-center justify-center "
+              className="p-2 rounded-lg cursor-pointer bg-white dark:bg-[#1c1c22] hover:ring-2 ring-indigo-500 transition-all flex items-center justify-center "
               title="สลับโหมด"
             >
               {theme === 'dark' ? (
-                <LightModeIcon className="text-yellow-500" />
+                <LightModeIcon className="text-[#22c55e]" />
               ) : (
-                <DarkModeIcon className="text-indigo-600" />
+                <DarkModeIcon className="text-[#22c55e]" />
               )}
             </button>
  )
