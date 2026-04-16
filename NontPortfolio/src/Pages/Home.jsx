@@ -3,7 +3,9 @@ import Hero from "../Components/Hero"
 import Project from "../Components/Project"
 import Blog from "../Components/Blog"
 import Footer from "../Components/Footer"
-import TechStack from "../Components/TechStack"
+import Certificate  from "../Components/Certificate"
+
+// import TechStack from "../Components/TechStack"
 
 
 const Home = () => {
@@ -13,7 +15,7 @@ const Home = () => {
         <Hero/>
         <Project/>
         <Blog/>
-        <TechStack/>
+        <Certificate/>
         <Footer/>
     </div>
   )
