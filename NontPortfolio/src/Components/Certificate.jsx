@@ -7,6 +7,8 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SearchIcon from '@mui/icons-material/ZoomIn';
 import CloseIcon from '@mui/icons-material/Close';
 import TagIcon from '@mui/icons-material/LocalOffer';
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 const CertificateSection = () => {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -44,15 +46,28 @@ const CertificateSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 font-jetbrains dark:text-white mb-6  uppercase tracking-tighter">
-            Certification <span className="text-[#22c55e]">&</span> Skillset
-          </h2>
-          <div className="w-32 h-2 bg-[#22c55e] mx-auto rounded-full mb-8"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed font-jetbrains">
-            Continuously developing skills and gaining experience through professional certifications and hands-on learning.
-          </p>
-        </div>
+        <div className="max-w-7xl mx-auto mb-20">
+        
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} 
+        >
+          <span className='text-[11px] font-jetbrains uppercase tracking-[0.2em] bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
+          Certification
+        </span>
+        </motion.p>
+
+        <motion.h2 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
+        >
+          
+          <span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">My Certification</span>
+        </motion.h2>
+      </div>
 
         {/* Certificates Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
