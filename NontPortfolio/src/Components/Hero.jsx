@@ -7,7 +7,7 @@ const Hero = () => {
     const [isVisible] = useState(true);
 
     return (
-        <div className=" h-lvh bg-gray-50 dark:text-white dark:bg-[#1c1c22] font-sans selection:bg-indigo-100   bg-[radial-gradient(#27272c_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none">
+        <div className=" h-lvh bg-gray-50 dark:text-white dark:bg-[#1c1c22] font-sans selection:bg-indigo-100   bg-[radial-gradient(#EDE9E6_1px,transparent_1px)] dark:bg-[radial-gradient(#27272c_1px,transparent_1px)] bg-size-[16px_16px]  pointer-events-none">
            
             <section className='relative min-h-screen flex items-center justify-center pt-28 pb-20 md:py-32  overflow-hidden'>
                 {/* Background Decorative Elements */}

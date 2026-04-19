@@ -17,7 +17,7 @@ const projects = [
       { name: "Tailwind CSS", color: "bg-[#38BDF8] text-white" },
       { name: "Axios", color: "bg-[#764ABC] text-white" }
     ],
-    githubUrl: "#",
+    githubUrl: "https://github.com/Arthitphk/FEDBC-FinalProject",
     liveUrl: "#",
     images: [
       "src/assets/Image/PJ_1/Project1img.png",
