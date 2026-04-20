@@ -74,7 +74,7 @@ const CertificateSection = () => {
           {certificates.map((cert) => (
             <div 
               key={cert.id}
-              className="group relative bg-white dark:bg-[#27272c] rounded-3xl p-8  dark:border dark:border-[#27272c]  hover:shadow-2xl hover:-translate-y-1 dark: hover:border-[#ADFF2F] dark:hover:border-[#ADFF2F] transition-all duration-500"
+              className="group relative bg-white dark:bg-[#27272c] rounded-lg p-8  dark:border dark:border-[#27272c]  hover:shadow-2xl hover:-translate-y-1 dark: hover:border-[#ADFF2F] dark:hover:border-[#ADFF2F] transition-all duration-500"
             >
               <div className="flex flex-col sm:flex-row items-start gap-6">
                 <div className={`p-5 rounded-2xl transition-all duration-500 shrink-0 shadow-sm bg-[#22c55e]/10 dark:bg-[#ADFF2F]/10`}>

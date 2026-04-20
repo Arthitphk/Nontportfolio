@@ -3,8 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 
 import {
-    GitHub, LinkedIn, Facebook, Menu, Close, Person, Code, Description, ContactPage
+   Menu, Close, Person, Code, Description, ContactPage
 } from '@mui/icons-material';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Theme from './Theme';
 
 const Navbar = () => {
@@ -20,12 +22,7 @@ const Navbar = () => {
         { name: 'Contact', href: '#contact'  },
     ];
 
-    // ข้อมูล Social Media
-    const socialLinks = [
-        { icon: <GitHub />, href: 'https://github.com', color: 'hover:text-[#22c55e]' },
-        { icon: <LinkedIn />, href: 'https://linkedin.com', color: 'hover:text-[#22c55e]' },
-        { icon: <Facebook />, href: 'https://facebook.com', color: 'hover:text-[#22c55e]' },
-    ];
+    
 
     const toggleMenu = () => setIsOpen(!isOpen);
     
@@ -53,8 +50,8 @@ const Navbar = () => {
 
                         {/* Logo Section */}
                         <div className="shrink-0 flex items-center">
-                            <span className="text-2xl font-jetbrains uppercase font-bold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent cursor-pointer">
-                                Nont&Arthit
+                            <span className="text-2xl font-jetbrains  font-bold  cursor-pointer dark:text-white">
+                                <ChevronLeftIcon />NontArthit<ChevronRightIcon/>
                             </span>
                         </div>
 
@@ -68,34 +65,21 @@ const Navbar = () => {
                                         className="px-3 font-jetbrains dark:text-slate-200 py-2 rounded-md text-[1.1rem] font-medium hover:text-[#22c55e] transition-colors flex items-center gap-1"
                                     >
                                         {link.icon}
-                                        {link.name}
+                                        {link.name} 
                                     </a>
                                 ))}
                             </div>
 
-                            {/* Social Icons (Desktop) */}
-                            <div className="flex items-center dark:text-slate-200 space-x-4 border-l pl-6 border-gray-200 dark:border-gray-700">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`transition-colors duration-200 ${social.color}`}
-                                    >
-                                        {social.icon}
-                                    </a>
-                                ))}
-
-                            </div>
+                            
                             <Theme />
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <div className="md:hidden flex items-center ">
+                        <div className="md:hidden flex items-center  ">
+                             <Theme />
                             <button
                                 onClick={toggleMenu}
-                                className="p-2 rounded-[0.8rem] text-gray-600 dark:text-gray-300  border-[#27272c] border-2 hover:bg-[#27272c] outline-none"
+                                className="p-2 rounded-[0.8rem] text-gray-600 dark:text-gray-300  hover:bg-[#27272c] outline-none"
                             >
                                 {isOpen ? <Close /> : <Menu />}
 
@@ -123,20 +107,9 @@ const Navbar = () => {
                             </a>
                         ))}
 
-                        {/* Social Icons (Mobile) */}
-                        <div className="flex justify-center space-x-8 pt-6 border-t border-gray-100 dark:border-gray-800 mt-4 ">
-                            {socialLinks.map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.href}
-                                    className={` text-gray-600 dark:text-gray-300 ${social.color}`}
-                                >
-                                    {social.icon}
-                                </a>
-                            ))}
-                            <Theme />
-                        </div>
+                        
                     </div>
+                    
                 </div>
             </nav>
         </div>

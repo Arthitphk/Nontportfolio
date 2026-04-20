@@ -70,7 +70,7 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <article 
               key={post.id} 
-              className="flex flex-col dark:bg-[#27272c]  overflow-hidden rounded-2xl shadow-lg  transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="flex flex-col dark:bg-[#27272c]  overflow-hidden rounded-lg shadow-lg  transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* รูปภาพหน้าปก */}
               <div className="shrink-0 relative group">
