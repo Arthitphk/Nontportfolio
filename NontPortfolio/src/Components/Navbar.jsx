@@ -16,8 +16,8 @@ const Navbar = () => {
 
     // ข้อมูลเมนูนำทาง
     const navLinks = [
-        { name: 'Home', href: '#home', },
-        { name: 'Project', href: '#projects'  },
+        { name: 'Home', href: '/Home', },
+        { name: 'Project', href: '/Project'  },
         { name: 'Blog', href: '#resume',   },
         { name: 'Contact', href: '#contact'  },
     ];
@@ -51,7 +51,7 @@ const Navbar = () => {
                         {/* Logo Section */}
                         <div className="shrink-0 flex items-center">
                             <span className="text-2xl font-jetbrains  font-bold  cursor-pointer dark:text-white">
-                                <ChevronLeftIcon />NontArthit<ChevronRightIcon/>
+                                <ChevronLeftIcon />NontArthit/<ChevronRightIcon/>
                             </span>
                         </div>
 

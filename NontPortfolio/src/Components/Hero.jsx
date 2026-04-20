@@ -12,15 +12,17 @@ const Hero = () => {
     ];
 
     return (
-        <div className="  pt-20 md:pt-0 lg:pt-0 dark:text-white dark:bg-[#1c1c22] font-sans selection:bg-indigo-100   absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-size-[60px_60px]  ">
+        <div className="  pt-20 md:pt-0 lg:pt-0 dark:text-white dark:bg-[#1c1c22]  selection:bg-indigo-100     ">
 
-            <section className='relative   items-center justify-center  md:py-32  overflow-hidden'>
+            <section className='relative   items-center justify-center  md:py-32  overflow-hidden '>
 
 
                 <div className='max-w-7xl mx-auto  px-4 sm:px-6 flex flex-col md:flex-row  items-center transition-all duration-1000 transform'>
 
                     {/* Left Column: Text Content */}
                     <div className="flex-1  p-2 lg:text-left order-2  lg:order-1">
+
+            
 
                         {/* Main Heading */}
                         <h1 className=" font-jetbrains   text-2xl text-gray-500 dark:text-white">
@@ -40,23 +42,31 @@ const Hero = () => {
                             Welcome to my personal website! I'm passionate about creating beautiful and functional web experiences. Feel free to explore my projects and get in touch!
                         </p>
 
+                        <div className='inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full bg-[#22c55e]/10 dark:bg-[#ADFF2F]/10 border border-[#22c55e]/20 dark:border-[#ADFF2F]/20'>
+                            <span className='relative flex h-2.5 w-2.5'>
+                                <span className='animate-ping md:hidden absolute inline-flex h-full w-full rounded-full bg-[#22c55e] dark:bg-[#ADFF2F] opacity-75'></span>
+                                <span className='relative inline-flex rounded-full h-2.5 w-2.5 bg-[#22c55e] dark:bg-[#ADFF2F]'></span>
+                            </span>
+                            <span className='text-xs font-semibold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent tracking-wide'>
+                                Available for Freelance & Full-time
+                            </span>
+                        </div>
+
 
                     </div>
 
 
                     {/* Right Column: Profile Image */}
                     <div className=" flex justify-end order-2 lg:order-2">
-                        <div className="relative  group">
-
+                        <div className="relative flex flex-col items-center justify-center flex-1 gap-4">
                             
-
                             {/* Image Container */}
-                            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 bg-white rounded-lg overflow-hidden  ">
+                            <div className="relative w-64 h-64 md:w-70 md:h-70 lg:w-70 lg:h-70 bg-white rounded-lg overflow-hidden  ">
                                 {/* Replace src with your image URL */}
                                 <img
                                     src="src\assets\Image\profile-img.png"
                                     alt="Profile"
-                                    className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
+                                    className="w-full h-full object-cover  group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                                 />
 
                             </div>

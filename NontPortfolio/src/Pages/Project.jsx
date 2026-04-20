@@ -5,6 +5,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import Navbar from "../Components/Navbar"
+
 
 const projects = [
   {
@@ -25,7 +27,7 @@ const projects = [
       "src/assets/Image/PJ_1/FEDBCIMGE3.png",
       "src/assets/Image/PJ_1/FEDBCIMG4.png"
     ],
-    
+
   },
   {
     id: 2,
@@ -128,9 +130,8 @@ const ImageCarousel = ({ images, title }) => {
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              idx === currentIndex ? "w-6 bg-[#22c55e]" : "bg-white/50"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${idx === currentIndex ? "w-6 bg-[#22c55e]" : "bg-white/50"
+              }`}
           />
         ))}
       </div>
@@ -140,103 +141,106 @@ const ImageCarousel = ({ images, title }) => {
 
 const Project = () => {
   return (
-    <div className="py-16 md:py-20 px-4 md:px-8 bg-gray-50 dark:bg-[#1c1c22] lg:px-24 overflow-hidden">
-      {/* ส่วนหัว (Header) */}
-      <div className="max-w-7xl mx-auto mb-20">
-        
-        <motion.p
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} 
-        >
-          <span className='text-[11px] font-semibold uppercase tracking-[0.2em] bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
-          Portfolio
-        </span>
-        </motion.p>
+    <div>
+      <Navbar />
+      <div className="py-16 md:py-20 px-4 md:px-8 bg-gray-50 dark:bg-[#1c1c22] lg:px-24 overflow-hidden">
+        {/* ส่วนหัว (Header) */}
+        <div className="max-w-7xl mx-auto mb-20 pt-20">
 
-        <motion.h2 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
-        >
-          
-          <span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">Selected Work</span>
-        </motion.h2>
-      </div>
-
-      {/* รายการโปรเจกต์ (Project List) */}
-      <div className="max-w-7xl mx-auto space-y-32 md:space-y-48">
-        {projects.map((project, index) => (
-          <motion.div 
-            key={project.id}
+          <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className={`flex flex-col md:flex-row gap-12 lg:gap-20 items-center`}
+            viewport={{ once: true }}
           >
-            {/* พื้นที่แสดงรูปภาพแบบ Carousel */}
-            <div className="w-full md:w-3/5 group relative">
-              <div className="absolute -inset-4 bg-linear-to-tr from-blue-500/10 to-indigo-500/10 rounded-3xl blur-2xl group-hover:opacity-100 transition duration-500 opacity-0"></div>
-              
-              <ImageCarousel images={project.images} title={project.title} />
+            <span className='text-[11px] font-semibold uppercase tracking-[0.2em] bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
+              Portfolio
+            </span>
+          </motion.p>
 
-              
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
+          >
 
-              {/* ตัวเลขประดับ (Decorative Number) */}
-              <span className={`hidden lg:block absolute -top-16 ${index % 2 !== 0 ? '-left-16' : '-right-16'} text-[160px] font-black text-slate-100 dark:text-slate-800/50 select-none pointer-events-none z-[-1]`}>
-                0{index + 1}
-              </span>
-            </div>
+            <span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">Selected Work</span>
+          </motion.h2>
+        </div>
 
-            {/* ข้อมูลโปรเจกต์ (Project Info) */}
-            <div className="w-full md:w-2/5 space-y-8">
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map(tag => (
-                  <span 
-                    key={tag.name} 
-                    className={`${tag.color} font-jetbrains text-[10px] font-bold px-3 py-1 rounded-md shadow-sm transform transition hover:-translate-y-0.5`}
+        {/* รายการโปรเจกต์ (Project List) */}
+        <div className="max-w-7xl mx-auto space-y-32 md:space-y-48">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className={`flex flex-col md:flex-row gap-12 lg:gap-20 items-center`}
+            >
+              {/* พื้นที่แสดงรูปภาพแบบ Carousel */}
+              <div className="w-full md:w-3/5 group relative">
+                <div className="absolute -inset-4 bg-linear-to-tr from-blue-500/10 to-indigo-500/10 rounded-3xl blur-2xl group-hover:opacity-100 transition duration-500 opacity-0"></div>
+
+                <ImageCarousel images={project.images} title={project.title} />
+
+
+
+                {/* ตัวเลขประดับ (Decorative Number) */}
+                <span className={`hidden lg:block absolute -top-16 ${index % 2 !== 0 ? '-left-16' : '-right-16'} text-[160px] font-black text-slate-100 dark:text-slate-800/50 select-none pointer-events-none z-[-1]`}>
+                  0{index + 1}
+                </span>
+              </div>
+
+              {/* ข้อมูลโปรเจกต์ (Project Info) */}
+              <div className="w-full md:w-2/5 space-y-8">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <span
+                      key={tag.name}
+                      className={`${tag.color} font-jetbrains text-[10px] font-bold px-3 py-1 rounded-md shadow-sm transform transition hover:-translate-y-0.5`}
+                    >
+                      {tag.name}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="font-jetbrains text-3xl lg:text-4xl font-extrabold dark:text-white text-slate-900 leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="font-jetbrains text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-6 pt-6">
+                  <a
+                    href={project.liveUrl}
+                    className="flex items-center gap-2 text-slate-900 dark:text-white font-bold hover:text-blue-600 transition-all group/link relative"
                   >
-                    {tag.name}
-                  </span>
-                ))}
-              </div>
-              
-              <div className="space-y-4">
-                <h3 className="font-jetbrains text-3xl lg:text-4xl font-extrabold dark:text-white text-slate-900 leading-tight">
-                  {project.title}
-                </h3>
-                <p className="font-jetbrains text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
-                  {project.description}
-                </p>
-              </div>
+                    <span className="flex items-center gap-2">
+                      See More
+                      <ArrowForwardIcon fontSize="small" className="group-hover/link:translate-x-1 transition-transform" />
+                    </span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover/link:w-full"></span>
+                  </a>
 
-              <div className="flex items-center gap-6 pt-6">
-                <a 
-                  href={project.liveUrl}
-                  className="flex items-center gap-2 text-slate-900 dark:text-white font-bold hover:text-blue-600 transition-all group/link relative"
-                >
-                  <span className="flex items-center gap-2">
-                    See More 
-                    <ArrowForwardIcon fontSize="small" className="group-hover/link:translate-x-1 transition-transform" />
-                  </span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover/link:w-full"></span>
-                </a>
-                
-                <div className="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
+                  <div className="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
 
-                <a 
-                  href={project.githubUrl}
-                  className="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
-                  aria-label="GitHub Repository"
-                >
-                  <GitHubIcon fontSize="medium" />
-                </a>
+                  <a
+                    href={project.githubUrl}
+                    className="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
+                    aria-label="GitHub Repository"
+                  >
+                    <GitHubIcon fontSize="medium" />
+                  </a>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
