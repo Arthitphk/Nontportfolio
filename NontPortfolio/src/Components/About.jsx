@@ -6,7 +6,7 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Header Section - Styled based on the provided image */}
                 <div className="mb-20 text-left">
-                    <div className="inline-block border-b-3 border-green-800 pb-1 mb-8">
+                    <div className="inline-block text-3xl font-display font-bold mb-10 relative before:content-[''] before:absolute before:-bottom-1.25 before:left-0 before:h-1 before:rounded-full before:w-17.5 before:bg-white/20">
                         <h2 className="text-4xl font-bold dark:text-white">About Me</h2>
                     </div>
 

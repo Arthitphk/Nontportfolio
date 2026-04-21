@@ -152,7 +152,7 @@ const Project = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className='text-[11px] font-semibold uppercase tracking-[0.2em] bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
+            <span className='text-[11px] font-semibold uppercase tracking-[0.2em] bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
               Portfolio
             </span>
           </motion.p>

@@ -12,7 +12,7 @@ const Hero = () => {
     ];
 
     return (
-        <div className="  pt-20 md:pt-0 lg:pt-0 dark:text-white dark:bg-[#1c1c22]  selection:bg-indigo-100     ">
+        <div className="  pt-20 md:pt-0 lg:pt-0 dark:text-white dark:bg-[#1c1c22]     ">
 
             <section className='relative   items-center justify-center  md:py-32  overflow-hidden '>
 

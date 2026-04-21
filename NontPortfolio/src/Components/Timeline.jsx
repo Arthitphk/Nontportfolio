@@ -34,29 +34,29 @@ const TimelineCard = ({ data, isWork }) => (
     className="group relative pl-8 pb-10 last:pb-0"
   >
     {/* Vertical Line Connector */}
-    <div className="absolute left-0 top-0 h-full w-px bg-slate-200 dark:bg-slate-800 group-last:h-12">
+    <div className="absolute left-0 top-0 h-full w-px   group-last:h-12">
       <motion.div 
         initial={{ height: 0 }}
         whileInView={{ height: '100%' }}
         viewport={{ once: true }}
-        className={`w-full ${isWork ? 'bg-indigo-500' : 'bg-emerald-500'}`}
+        className={`mt-9 w-full ${isWork ? 'bg-[#22c55e] dark:bg-[#ADFF2F]/50' : 'bg-[#22c55e] dark:bg-[#ADFF2F]/50'}`}
       />
     </div>
 
     {/* Icon Node */}
-    <div className={`absolute -left-4.5 top-0 flex h-9 w-9 items-center justify-center rounded-xl border-4 border-white dark:border-slate-950 shadow-sm transition-transform group-hover:scale-110 ${
-      isWork ? 'bg-indigo-600 text-white' : 'bg-emerald-600 text-white'
+    <div className={`absolute -left-4.5 top-0 flex h-9 w-9 items-center justify-center rounded   transition-transform group-hover:scale-110 ${
+      isWork ? 'bg-[#22c55e]/10 dark:bg-[#ADFF2F]/10 text-[#22c55e]' : 'bg-[#22c55e]/10 dark:bg-[#ADFF2F]/10 text-[#22c55e]'
     }`}>
       {isWork ? <Work sx={{ fontSize: 18 }} /> : <School sx={{ fontSize: 18 }} />}
     </div>
 
     {/* Card Content */}
-    <div className="rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-[#27272c] p-5 shadow-sm transition-all hover:shadow-md dark:hover:border-slate-700">
+    <div className="rounded-2xl   bg-white dark:bg-[#1c1c22] p-5  transition-all ">
       <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-        <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+        <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-[#ADFF2F]  transition-colors">
           {data.title}
         </h3>
-        <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs font-semibold text-slate-500 dark:text-slate-400">
+        <span className="inline-flex items-center gap-1 rounded-full bg-[#22c55e]/10 dark:bg-[#ADFF2F]/10 text-[#22c55e] px-3 py-1 text-xs font-semibold ">
           <CalendarMonth sx={{ fontSize: 14 }} />
           {data.period}
         </span>
@@ -118,7 +118,7 @@ const timeline = () => {
   ];
 
   return (
-    <div className=" bg-slate-50 dark:bg-[#1c1c22] py-16 px-4 selection:bg-indigo-500 selection:text-white">
+    <div className=" bg-white dark:bg-[#1c1c22] py-16 px-4 selection:bg-indigo-500 selection:text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 "> 
         
         {/* Two Column Layout */}
@@ -127,17 +127,16 @@ const timeline = () => {
           {/* Left Column: Education */}
           <section>
             <div className="mb-10 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600">
-                <School />
+              <div className="inline-block text-3xl font-display font-bold mb-10 relative before:content-[''] before:absolute before:-bottom-1.25 before:left-0 before:h-1 before:rounded-full before:w-17.5 before:bg-white/20">
+                <h2 className="text-4xl font-bold dark:text-white font-jetbrains">Education</h2>
               </div>
-              <h2 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">Education</h2>
             </div>
             <motion.div 
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="space-y-2"
+              className="space-y-2 font-jetbrains"
             >
               {educationData.map((item, idx) => (
                 <TimelineCard key={idx} data={item} isWork={false} />
@@ -148,17 +147,16 @@ const timeline = () => {
           {/* Right Column: Experience */}
           <section>
             <div className="mb-10 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600">
-                <Work />
+              <div className="inline-block text-3xl font-display font-bold mb-10 relative before:content-[''] before:absolute before:-bottom-1.25 before:left-0 before:h-1 before:rounded-full before:w-17.5 before:bg-white/20">
+                <h2 className="text-4xl font-bold dark:text-white font-jetbrains">Experience</h2>
               </div>
-              <h2 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">Experience</h2>
             </div>
             <motion.div 
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="space-y-2"
+              className="space-y-2 font-jetbrains"
             >
               {workData.map((item, idx) => (
                 <TimelineCard key={idx} data={item} isWork={true} />
@@ -169,11 +167,8 @@ const timeline = () => {
         </div>
       </div>
       
-      {/* Background Ornaments */}
-      <div className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full overflow-hidden opacity-20">
-        <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-500 blur-[120px]" />
-        <div className="absolute -right-20 bottom-20 h-72 w-72 rounded-full bg-emerald-500 blur-[120px]" />
-      </div>
+     
+      
     </div>
   );
 };
