@@ -2,13 +2,14 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div className="  dark:bg-[#1c1c22] py-16 px-4 sm:px-6 lg:px-8  dark:text-white font-jetbrains">
+        <div className="  dark:bg-[#1c1c22] bg-slate-50 py-16 px-4 sm:px-6 lg:px-8  dark:text-white font-jetbrains">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Header Section - Styled based on the provided image */}
                 <div className="mb-20 text-left">
-                    <div className="inline-block text-3xl font-display font-bold mb-10 relative before:content-[''] before:absolute before:-bottom-1.25 before:left-0 before:h-1 before:rounded-full before:w-17.5 before:bg-white/20">
-                        <h2 className="text-4xl font-bold dark:text-white">About Me</h2>
-                    </div>
+                    <h2 className="text-3xl font-bold dark:text-white relative inline-block pb-4 mb-10 font-jetbrains">
+                        About Me
+                        <span className="absolute bottom-0 left-0 w-10 h-1 bg-[#22c55e] rounded-full"></span>
+                    </h2>
 
                     <div className="max-w-4xl space-y-8">
                         <p className="text-xl leading-relaxed dark:text-white text-gray-500">

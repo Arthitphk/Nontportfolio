@@ -117,7 +117,7 @@ const timeline = () => {
     ];
 
     return (
-        <div className=" bg-white dark:bg-[#1c1c22] py-16 px-4 selection:bg-indigo-500 selection:text-white">
+        <div className=" dark:bg-[#1c1c22] bg-slate-50 py-16 px-4 selection:bg-indigo-500 ">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 ">
 
                 {/* Two Column Layout */}
@@ -126,7 +126,7 @@ const timeline = () => {
                     {/* Left Column: Education */}
                     <section>
                         <div className="mb-10 flex items-center gap-3">
-                            <h2 className="text-3xl font-bold text-white relative inline-block pb-4 font-jetbrains">
+                            <h2 className="text-3xl font-bold dark:text-white relative inline-block pb-4 font-jetbrains">
                                 Education
                                 <span className="absolute bottom-0 left-0 w-10 h-1 bg-[#22c55e] rounded-full"></span>
                             </h2>
@@ -147,7 +147,7 @@ const timeline = () => {
                     {/* Right Column: Experience */}
                     <section>
                         <div className="mb-10 flex items-center gap-3">
-                            <h2 className="text-3xl font-bold text-white relative inline-block pb-4 font-jetbrains">
+                            <h2 className="text-3xl font-bold dark:text-white relative inline-block pb-4 font-jetbrains">
                                 Experience
                                 <span className="absolute bottom-0 left-0 w-10 h-1 bg-[#22c55e] rounded-full"></span>
                             </h2>
