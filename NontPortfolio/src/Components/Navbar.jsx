@@ -12,7 +12,7 @@ import Theme from './Theme';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-
+    
 
     // ข้อมูลเมนูนำทาง
     const navLinks = [
@@ -62,7 +62,7 @@ const Navbar = () => {
                                     <a
                                         key={link.name}
                                         href={link.href}
-                                        className="px-3 font-jetbrains dark:text-slate-200 py-2 rounded-md text-[1.1rem] font-medium hover:text-[#22c55e] transition-colors flex items-center gap-1"
+                                        className={`px-3 font-jetbrains dark:text-slate-200 py-2 rounded-md text-[1.1rem] font-medium hover:text-[#22c55e] transition-colors flex items-center gap-1 `}
                                     >
                                         {link.icon}
                                         {link.name} 
