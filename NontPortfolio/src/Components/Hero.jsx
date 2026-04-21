@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import { GitHub, LinkedIn, Facebook, Menu, Close, Person, Code, Description, ContactPage } from '@mui/icons-material';
-
+import { motion} from 'framer-motion';
 const Hero = () => {
     // ข้อมูล Social Media
     const socialLinks = [
@@ -20,7 +20,11 @@ const Hero = () => {
                 <div className='max-w-7xl mx-auto  px-4 sm:px-6 flex flex-col md:flex-row  items-center transition-all duration-1000 transform'>
 
                     {/* Left Column: Text Content */}
-                    <div className="flex-1  p-2 lg:text-left order-2  lg:order-1">
+                    <motion.div initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8 }}
+                                className="flex-1  p-2 lg:text-left order-2  lg:order-1">
 
             
 
@@ -47,13 +51,13 @@ const Hero = () => {
                                 <span className='animate-ping md:hidden absolute inline-flex h-full w-full rounded-full bg-[#22c55e] dark:bg-[#ADFF2F] opacity-75'></span>
                                 <span className='relative inline-flex rounded-full h-2.5 w-2.5 bg-[#22c55e] dark:bg-[#ADFF2F]'></span>
                             </span>
-                            <span className='text-xs font-semibold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent tracking-wide'>
+                            <span className='text-xs font-semibold bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent tracking-wide'>
                                 Available for Freelance & Full-time
                             </span>
                         </div>
 
 
-                    </div>
+                    </motion.div>
 
 
                     {/* Right Column: Profile Image */}
