@@ -5,6 +5,7 @@ import Certificate  from "../Components/Certificate";
 import About from "../Components/About";
 import Timeline from "../Components/Timeline";
 import Content from "../Components/Content";
+import Footer from "../Components/Footer";
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
         <About/>
         <Timeline/>
         <Content/>
+        <Footer/>
     </div>
   )
 }

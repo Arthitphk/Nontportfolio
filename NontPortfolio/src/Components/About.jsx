@@ -105,7 +105,7 @@ const About = () => {
                 <div className="dark:bg-[#1c1c22]  ">
                     {/* หัวข้อเล็กๆ ด้านบน */}
                     <div className="flex items-center gap-3 mb-6 px-2">
-                        <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Tech Stack</span>
+                        <span className="text-sm  font-jetbrains font-bold text-gray-400 uppercase tracking-widest">Tech Stack</span>
                        
                     </div>
 

@@ -44,7 +44,7 @@ const Content = () => {
     {
       icon: SportsEsportsIcon,
       title: "Game Development",
-      description: "Creating engaging and interactive games for various platforms with modern game engines.",
+      description: "Soon....",
       iconColor: " text-[#22c55e]"
     },
     {
