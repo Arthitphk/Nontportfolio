@@ -1,10 +1,10 @@
 import React from 'react';
 // นำเข้า MUI Icons
 import CodeIcon from '@mui/icons-material/Code';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+
 import DesktopWindowsIcon from '@mui/icons-material/DesktopWindows';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
-
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 /**
  * ServiceCard Component
  */
@@ -42,9 +42,9 @@ const Content = () => {
       iconColor: " text-[#22c55e]"
     },
     {
-      icon: PhoneIphoneIcon,
-      title: "Mobile Applications",
-      description: "Crafting cross-platform mobile apps with smooth performance and elegant UI for both iOS and Android.",
+      icon: SportsEsportsIcon,
+      title: "Game Development",
+      description: "Creating engaging and interactive games for various platforms with modern game engines.",
       iconColor: " text-[#22c55e]"
     },
     {
@@ -61,6 +61,17 @@ const Content = () => {
     }
   ];
 
+
+
+  
+
+
+
+
+
+
+
+
   return (
     <div className=" dark:bg-[#1c1c22] bg-slate-50 py-12 px-6 md:py-20 md:px-16 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -68,7 +79,7 @@ const Content = () => {
         {/* Section Header */}
         <header className="mb-12">
           <h2 className="text-3xl font-bold dark:text-white relative inline-block pb-4 font-jetbrains">
-            What I'm doing
+            What I'm Focusing On
             <span className="absolute bottom-0 left-0 w-10 h-1 bg-[#22c55e] rounded-full"></span>
           </h2>
         </header>

@@ -1,6 +1,85 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+
+
+
+
+
+
+
+
+
+
 
 const About = () => {
+
+    const skills = [
+        {
+            name: 'HTML5',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+        },
+        {
+            name: 'CSS3',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+        },
+        {
+            name: 'JavaScript',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+        },
+        {
+            name: 'TypeScript',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+        },
+        {
+            name: 'React',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+        },
+        {
+            name: 'TailwindCSS',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'
+        },
+        {
+            name: 'MUI',
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg'
+        },
+        {
+            name: 'Vite',
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg'
+        },
+    ];
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.08,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { y: 10, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.4,
+                ease: "easeOut",
+            },
+        },
+    };
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="  dark:bg-[#1c1c22] bg-slate-50 py-16 px-4 sm:px-6 lg:px-8  dark:text-white font-jetbrains">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -22,6 +101,49 @@ const About = () => {
                         </p>
                     </div>
                 </div>
+
+                <div className="dark:bg-[#1c1c22]  ">
+                    {/* หัวข้อเล็กๆ ด้านบน */}
+                    <div className="flex items-center gap-3 mb-6 px-2">
+                        <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Tech Stack</span>
+                       
+                    </div>
+
+                    {/* แถวแนวนอนของ Skills */}
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="flex flex-wrap  gap-4 md:gap-8"
+                    >
+                        {skills.map((skill, index) => (
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                whileHover={{
+                                    y: -5,
+                                    transition: { duration: 0.2 }
+                                }}
+                                className="flex flex-col items-center gap-2 group cursor-default"
+                            >
+                                <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center  group-hover:grayscale-0 transition-all duration-300">
+                                    <img
+                                        src={skill.logo}
+                                        alt={`${skill.name} logo`}
+                                        className="w-full h-full object-contain"
+                                        loading="lazy"
+                                
+                                    />
+                                </div>
+                                {/* ชื่อภาษาจะปรากฏเด่นขึ้นเมื่อ hover */}
+                                <span className="text-[10px] md:text-xs font-bold text-gray-400 group-hover:text-blue-600 transition-colors">
+                                    {skill.name}
+                                </span>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+
             </div>
         </div>
     )
