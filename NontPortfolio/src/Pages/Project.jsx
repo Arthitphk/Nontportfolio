@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // นำเข้าไอคอนจาก Material UI
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Navbar from "../Components/Navbar"
-
+import Footer from "../Components/Footer";
 
 const projects = [
   {
@@ -140,6 +140,8 @@ const ImageCarousel = ({ images, title }) => {
 };
 
 const Project = () => {
+
+
   return (
     <div>
       <Navbar />
@@ -242,6 +244,7 @@ const Project = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
