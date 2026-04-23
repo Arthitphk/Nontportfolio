@@ -42,35 +42,28 @@ const CertificateSection = () => {
   
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-[#1c1c22] min-h-screen font-sans">
+    <section className="py-24 bg-gray-50 dark:bg-[#1c1c22]  ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="max-w-7xl mx-auto mb-20">
         
-        <motion.p
-          initial={{ opacity: 0, y: 50 }}
+        <motion.header initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} 
-        >
-          <span className='text-[11px] font-jetbrains uppercase tracking-[0.2em] bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent'>
-          Certification
-        </span>
-        </motion.p>
+          viewport={{ once: true }} className="mb-12">
+          <h2 className="text-3xl font-bold dark:text-white relative inline-block pb-4 font-jetbrains">
+             Certification
+            <span className="absolute bottom-0 left-0 w-10 h-1 bg-[#22c55e] rounded-full"></span>
+          </h2>
+        </motion.header>
 
-        <motion.h2 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold dark:text-white text-slate-900 tracking-tight leading-tight font-jetbrains"
-        >
-          
-          <span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent ">My Certification</span>
-        </motion.h2>
+        
       </div>
 
         {/* Certificates Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <motion.div initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {certificates.map((cert) => (
             <div 
               key={cert.id}
@@ -113,7 +106,7 @@ const CertificateSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Modal Optimized for Landscape Images */}
         {selectedCert && (

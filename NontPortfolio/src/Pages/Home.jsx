@@ -19,6 +19,7 @@ const Home = () => {
         <About/>
         <Timeline/>
         <Content/>
+        <Certificate/>
         <Contact/>
         <Footer/>
     </div>

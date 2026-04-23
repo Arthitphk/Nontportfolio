@@ -80,6 +80,8 @@ const projects = [
 // คอมโพเนนต์เลื่อนรูปภาพ (Image Carousel)
 const ImageCarousel = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+
 
   const nextSlide = (e) => {
     e.preventDefault();
@@ -140,7 +142,11 @@ const ImageCarousel = ({ images, title }) => {
 };
 
 const Project = () => {
+  const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
 
   return (
     <div>

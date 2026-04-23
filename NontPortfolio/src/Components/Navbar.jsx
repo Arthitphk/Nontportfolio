@@ -18,8 +18,7 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', href: '/Home', },
         { name: 'Project', href: '/Project'  },
-        { name: 'Blog', href: '#resume',   },
-        { name: 'Contact', href: '#contact'  },
+        { name: 'Blog', href: '/Blog',   },
     ];
 
     
@@ -100,7 +99,7 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="block px-3 py-4 rounded-md text-base font-medium dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center gap-3"
+                                className="block px-3 py-4 rounded-md text-base font-medium dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800  items-center gap-3"
                             >
                                 <span className="text-blue-600">{link.icon}</span>
                                 {link.name}
