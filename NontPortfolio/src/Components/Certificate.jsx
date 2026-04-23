@@ -24,7 +24,7 @@ const CertificateSection = () => {
       credentialUrl: "#",
       imageUrl: "src/assets/Image/Certification/certificate_1.png",
       skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      color: "blue"
+      color: "#22c55e"
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const CertificateSection = () => {
       credentialUrl: "#",
       imageUrl: "src/assets/Image/Certification/certificate2.png",
       skills: ["Web Fundamentals", "UI Components", "Modern JS", "Debugging"],
-      color: "purple"
+      color: "#22c55e"
     }
   ];
 
@@ -71,7 +71,7 @@ const CertificateSection = () => {
             >
               <div className="flex flex-col sm:flex-row items-start gap-6">
                 <div className={`p-5 rounded-2xl transition-all duration-500 shrink-0 shadow-sm bg-[#22c55e]/10 dark:bg-[#ADFF2F]/10`}>
-                  <AwardIcon sx={{ fontSize: 36 }} className='text-[#22c55e] dark:text-[#ADFF2F]' />
+                  <AwardIcon sx={{ fontSize: 36 }} className='text-[#22c55e]' />
                 </div>
                 
                 <div className="flex-1 w-full">
