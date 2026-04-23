@@ -29,15 +29,15 @@ const Hero = () => {
             
 
                         {/* Main Heading */}
-                        <h1 className=" font-jetbrains   text-2xl text-gray-500 dark:text-white">
+                        <h1 className=" font-jetbrains mb-3  text-3xl text-gray-500 dark:text-white">
                             👋🏼 Hello, I'm
                         </h1>
 
-                        <h1 className=" font-jetbrains  text-6xl md:text-7xl font-bold">
+                        <h1 className=" font-jetbrains  text-6xl md:text-7xl font-bold mb-3">
                             Arthit Chatusor
                         </h1>
 
-                        <h1 className=" font-jetbrains  text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight lg:mb-6">
+                        <h1 className=" font-jetbrains  text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white mb-3">
                             <span className="bg-linear-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent"> Front-End Developer</span>
                         </h1>
 

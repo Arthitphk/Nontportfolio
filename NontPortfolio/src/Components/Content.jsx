@@ -1,7 +1,7 @@
 import React from 'react';
 // นำเข้า MUI Icons
 import CodeIcon from '@mui/icons-material/Code';
-
+import { motion } from 'framer-motion';
 import DesktopWindowsIcon from '@mui/icons-material/DesktopWindows';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
@@ -74,7 +74,10 @@ const Content = () => {
 
   return (
     <div className=" dark:bg-[#1c1c22] bg-slate-50 py-12 px-6 md:py-20 md:px-16 ">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8 }} className="mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* Section Header */}
         <header className="mb-12">
@@ -99,7 +102,7 @@ const Content = () => {
 
         
         
-      </div>
+      </motion.div>
     </div>
   );
 };
