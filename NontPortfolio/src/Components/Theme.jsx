@@ -8,10 +8,9 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 const Theme = () => {
     const [theme, setTheme] = useState(() => {
     // อ่านค่าเริ่มต้นจาก localStorage หรือ System Preference
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme');
-      if (saved) return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
     }
     return 'light';
   });

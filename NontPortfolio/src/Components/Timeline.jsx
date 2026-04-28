@@ -50,7 +50,7 @@ const TimelineCard = ({ data, isWork }) => (
         </div>
 
         {/* Card Content */}
-        <div className="rounded-2xl   bg-white dark:bg-[#1c1c22] p-5  transition-all ">
+        <div className="rounded-2xl   bg-white dark:bg-[#1c1c22] p-2  transition-all ">
             <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
                 <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-[#ADFF2F]  transition-colors">
                     {data.title}
@@ -84,35 +84,35 @@ const TimelineCard = ({ data, isWork }) => (
 const timeline = () => {
     const educationData = [
         {
-            title: 'Master of Computer Science',
-            subTitle: 'Stanford University',
-            period: '2018 - 2020',
-            location: 'Palo Alto, CA',
-            description: 'ศึกษาด้าน AI และ Machine Learning โดยเน้นการประยุกต์ใช้ในอุตสาหกรรมซอฟต์แวร์สมัยใหม่',
+            title: 'High School Diploma',
+            subTitle: 'Pakkred secondary school',
+            period: '2013 - 2019',
+            location: 'Nonthaburi, TH',
+            description: 'ไทย-สังคมศึกษา',
         },
         {
-            title: 'Bachelor of Engineering',
-            subTitle: 'Chulalongkorn University',
-            period: '2014 - 2018',
+            title: 'Bachelor of arts in English',
+            subTitle: 'Sripatum University (SPU)',
+            period: '2019 - 2023',
             location: 'Bangkok, TH',
-            description: 'วิศวกรรมคอมพิวเตอร์ พื้นฐานอัลกอริทึม และระบบเครือข่าย',
+            description: 'Upgrade language skills to be better in listening, speaking, reading, and writing ',
         }
     ];
 
     const workData = [
         {
-            title: 'Senior Software Engineer',
+            title: 'Public Relations, Corporate Communications at Department of International Trade Promotion, Ministry of Commerce Thailand (Internship)',
             subTitle: 'Tech Innovations Lab',
-            period: '2022 - Present',
+            period: '2022',
             location: 'Bangkok, TH',
-            description: 'ออกแบบระบบ Cloud Infrastructure และจัดการทีมพัฒนา Frontend ในการทำ Design System',
+            description: 'responsible for producing artwork for the office and infographics for the ministry. This also includes managing the department s social media channels, such as Line@, Facebook, YouTube and DITPFAMILY  My second role is producing press release news and I participated in a meeting with the ministry spokesperson team to record a video. My third role is about developing and implementing media communication strategies and planning the publication of the THINK TRADE DITP magazine.',
         },
         {
-            title: 'Frontend Developer',
-            subTitle: 'Digital Agency X',
-            period: '2020 - 2022',
+            title: ' Front-End Developer Virtual Internship',
+            subTitle: 'borntodev Co., Ltd.',
+            period: '2024',
             location: 'Bangkok, TH',
-            description: 'พัฒนา Responsive Web Applications โดยใช้ Next.js และ Framer Motion',
+            description: 'โครงการค่ายพัฒนาทักษะเพื่อการทำงานจริงสาย Dev / IT',
         }
     ];
 

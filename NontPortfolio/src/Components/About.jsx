@@ -34,7 +34,7 @@ const About = () => {
             name: 'React',
             logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
         },
-        {
+        { 
             name: 'TailwindCSS',
             logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'
         },
@@ -94,12 +94,12 @@ const About = () => {
                     </h2>
 
                     <div className="max-w-4xl space-y-8">
-                        <p className="text-xl leading-relaxed dark:text-white text-gray-500">
+                        <p className="text-sm md:text-lg lg:text-xl   leading-relaxed dark:text-white text-gray-500">
                             I have spent my time intensively studying Web Development and building my technical skills. Now, I am ready to bring my dedication, along with my English proficiency and coding
                             knowledge, to work for your company. I am very eager to learn and grow as a professional developer here.
                         </p>
 
-                        <p className="text-lg dark:text-white text-gray-500">
+                        <p className="text-sm md:text-lg lg:text-xl dark:text-white text-gray-500">
                             Currently unemployed and actively seeking opportunities at forward-thinking companies. I'm eager to bring my skills and passion for front-end development to a dynamic team.
                         </p>
                     </div>
@@ -139,7 +139,7 @@ const About = () => {
                                     />
                                 </div>
                                 {/* ชื่อภาษาจะปรากฏเด่นขึ้นเมื่อ hover */}
-                                <span className="text-[10px] md:text-xs font-bold text-gray-400 group-hover:text-blue-600 transition-colors">
+                                <span className="text-[10px] md:text-xs font-bold text-gray-400 group-hover:text-[#ADFF2F] transition-colors">
                                     {skill.name}
                                 </span>
                             </motion.div>
