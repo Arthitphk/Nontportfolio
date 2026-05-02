@@ -16,7 +16,7 @@ const Navbar = () => {
 
     // ข้อมูลเมนูนำทาง
     const navLinks = [
-        { name: 'Home', href: '/Home', },
+        { name: 'Home', href: '/', },
         { name: 'Project', href: '/Project'  },
         { name: 'Blog', href: '/Blog',   },
     ];

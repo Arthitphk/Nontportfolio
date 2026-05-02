@@ -88,7 +88,7 @@ const timeline = () => {
             subTitle: 'Pakkred secondary school',
             period: '2013 - 2019',
             location: 'Nonthaburi, TH',
-            description: 'ไทย-สังคมศึกษา',
+            description: 'Thai-Social Studies',
         },
         {
             title: 'Bachelor of arts in English',
@@ -112,7 +112,7 @@ const timeline = () => {
             subTitle: 'borntodev Co., Ltd.',
             period: '2024',
             location: 'Bangkok, TH',
-            description: 'โครงการค่ายพัฒนาทักษะเพื่อการทำงานจริงสาย Dev / IT',
+            description: 'Dev/IT Real-World Work Skills Development Bootcamp Project',
         }
     ];
 
